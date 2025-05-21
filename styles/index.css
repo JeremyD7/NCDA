@@ -1,4 +1,21 @@
+.bg {
+  background-image: url(../assets/images/bg0.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  /* 改为fixed定位 */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* 使用视口宽度 */
+  height: 100vh;
+  /* 使用视口高度 */
+  z-index: -1;
+}
+
 .header {
+  position: relative;
   background-image: url(../assets/images/nav.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -7,6 +24,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20% 0 5%;
+  z-index: 1;
 
 }
 
