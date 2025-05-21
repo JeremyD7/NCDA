@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>夏</title>
+    <link rel="shortcut icon" href="../imgs/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../css/summer.css" />
+    <link rel="stylesheet" href="../css/menu-2.css" />
+  </head>
+  <body class="loading">
+      <div class="buttom-menu" style="z-index:9999 ;">
+      <input class="checkbox" type="checkbox" />
+      <div class="logo">
+        <img src="../imgs/menu.jpg" />
+      </div>
+      <div class="menu">
+        <div>
+          <ul class="caidan">
+               <li><a href="../index.html">青韵汝瓷</a></li>
+              <li><a href="./introduction.html">青韵介绍</a></li>
+              <li><a href="./yayun.html">鼎青雅韵</a></li>
+              <li><a href="./spring.html">四季青韵</a></li>         
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="box1">
+      <ul id="tabs">
+        <li class="selectTab">
+          <a href="./spring.html" onclick="selectTab('tabContent0',this)"
+            ><div id="item">春</div></a
+          >
+        </li>
+        <li>
+          <a  onclick="selectTab('tabContent1',this)"
+            ><div id="item" class="active">夏</div></a
+          >
+        </li>
+        <li>
+          <a href="./autumn.html" onclick="selectTab('tabContent2',this)"
+            ><div id="item">秋</div></a
+          >
+        </li>
+        <li>
+          <a href="./winter.html" onclick="selectTab('tabContent3',this)"
+            ><div id="item">冬</div></a
+          >
+        </li>
+      </ul>
+    </div>
+    <svg class="hidden">
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <title></title>
+        <polygon
+          points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "
+        />
+      </symbol>
+      <symbol id="icon-drop" viewBox="0 0 24 24">
+        <title></title>
+        <path
+          d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"
+        />
+        <path
+          d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"
+        />
+      </symbol>
+    </svg>
+    <main>
+      <div class="slideshow">
+        <div class="slide slide--layout-1 slide--current">
+          <figure class="slide__figure">
+            <div class="slide__figure-inner">
+              <div
+                class="slide__figure-img"
+                style="background-image: url(../imgs/x1.jpg)"
+              ></div>
+              <div class="slide__figure-reveal"></div>
+            </div>
+            <figcaption>
+              <h3 class="slide__figure-title">四叶杯/瓜瓞绵绵</h3>
+              <p class="slide__figure-description">
+                盛夏，是瓜果成长丰盛的时期。汝瓷上青花手绘瓜果蔬菜纹饰，瓜果形态写实逼真，皆为常见植物，极富生活烟火气息。
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="slide__figure">
+            <div class="slide__figure-inner">
+              <div
+                class="slide__figure-img"
+                style="background-image: url(../imgs/x3.jpg)"
+              ></div>
+              <div class="slide__figure-reveal"></div>
+            </div>
+            <figcaption>
+              <h3 class="slide__figure-title"></h3>
+              <p class="slide__figure-description">
+                《诗经·大雅》记有：“绵绵瓜瓞，民之初生。”
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="slide__figure">
+            <div class="slide__figure-inner">
+              <div
+                class="slide__figure-img"
+                style="background-image: url(../imgs/x2.png)"
+              ></div>
+              <div class="slide__figure-reveal"></div>
+            </div>
+            <figcaption>
+              <h3 class="slide__figure-title"></h3>
+              <p class="slide__figure-description"></p>
+            </figcaption>
+          </figure>
+          <span class="slide__number slide__number--right">壹</span>
+        </div>
+        <div class="slide slide--layout-2">
+          <figure class="slide__figure">
+            <div class="slide__figure-inner">
+              <div
+                class="slide__figure-img"
+                style="background-image: url(../imgs/x4.jpg)"
+              ></div>
+              <div class="slide__figure-reveal"></div>
+            </div>
+            <figcaption>
+              <h3 class="slide__figure-title">大茶海杯/丝瓜</h3>
+              <p class="slide__figure-description">
+                丝瓜丰茂，蔓藤有瓜又有花，正是繁茂时节。
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="slide__figure">
+            <div class="slide__figure-inner">
+              <div
+                class="slide__figure-img"
+                style="background-image: url(../imgs/x5.jpg)"
+              ></div>
+              <div class="slide__figure-reveal"></div>
+            </div>
+            <figcaption>
+              <h3 class="slide__figure-title"></h3>
+              <p class="slide__figure-description">
+                小花黄灿，一朵、两朵与瓜为伴，与叶为伍，待到深夏，即有一片乘凉之地。藤下摇扇，晃晃悠悠，然又以茶汤慢饮，一日浮生了得。
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="slide__figure">
+            <div class="slide__figure-inner">
+              <div
+                class="slide__figure-img"
+                style="background-image: url(../imgs/x6.png)"
+              ></div>
+              <div class="slide__figure-reveal"></div>
+            </div>
+            <figcaption>
+              <h3 class="slide__figure-title"></h3>
+              <p class="slide__figure-description"></p>
+            </figcaption>
+          </figure>
+
+          <span class="slide__number slide__number--right">贰</span>
+        </div>
+        <div class="slide slide--layout-3">
+          <figure class="slide__figure">
+            <div class="slide__figure-inner">
+              <div
+                class="slide__figure-img"
+                style="background-image: url(../imgs/x7.jpg)"
+              ></div>
+              <div class="slide__figure-reveal"></div>
+            </div>
+            <figcaption>
+              <h3 class="slide__figure-title">银杏杯/闲趣</h3>
+              <p class="slide__figure-description">
+                汝瓷上绘一幅螳螂对草木之景。自然将螳螂形态刻画，细腻而生动。身形前倾，似是在观望前方草木，又似在伺机跳动，极富意趣。
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="slide__figure">
+            <div class="slide__figure-inner">
+              <div
+                class="slide__figure-img"
+                style="background-image: url(../imgs/x9.png)"
+              ></div>
+              <div class="slide__figure-reveal"></div>
+            </div>
+            <figcaption>
+              <h3 class="slide__figure-title"></h3>
+              <p class="slide__figure-description">
+                夏天，雨水增多，气候温热，植物茁壮成长，花鸟虫鱼亦是活动频繁。夏天，热闹而鲜活。
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="slide__figure">
+            <div class="slide__figure-inner">
+              <div
+                class="slide__figure-img"
+                style="background-image: url(../imgs/x8.jpg)"
+              ></div>
+              <div class="slide__figure-reveal"></div>
+            </div>
+            <figcaption>
+              <h3 class="slide__figure-title"></h3>
+              <p class="slide__figure-description"></p>
+            </figcaption>
+          </figure>
+          <span class="slide__number slide__number--right">叁</span>
+        </div>
+        <div class="slide slide--layout-4">
+          <figure class="slide__figure">
+            <div class="slide__figure-inner">
+              <div
+                class="slide__figure-img"
+                style="background-image: url(../imgs/x10.jpg)"
+              ></div>
+              <div class="slide__figure-reveal"></div>
+            </div>
+            <figcaption>
+              <h3 class="slide__figure-title">菡萏杯/花团锦绣</h3>
+              <p class="slide__figure-description">
+                菡萏，荷花别称，指荷花未开的模样。
+                菡萏出水，枫桥无腔，长亭无调；云香水香，一湖良辰，清流见底。
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="slide__figure">
+            <div class="slide__figure-inner">
+              <div
+                class="slide__figure-img"
+                style="background-image: url(../imgs/x11.jpg)"
+              ></div>
+              <div class="slide__figure-reveal"></div>
+            </div>
+            <figcaption>
+              <h3 class="slide__figure-title"></h3>
+              <p class="slide__figure-description">
+                初夏，应以荷相期，以风相远，以云相望，以日月烟霞之许而一遇。
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="slide__figure">
+            <div class="slide__figure-inner">
+              <div
+                class="slide__figure-img"
+                style="background-image: url(../imgs/x12.jpg)"
+              ></div>
+              <div class="slide__figure-reveal"></div>
+            </div>
+            <figcaption>
+              <h3 class="slide__figure-title"></h3>
+              <p class="slide__figure-description"></p>
+            </figcaption>
+          </figure>
+
+          <span class="slide__number slide__number--right">肆</span>
+        </div>
+
+        <!-- revealer -->
+        <div class="revealer">
+          <div class="revealer__item revealer__item--left"></div>
+          <div class="revealer__item revealer__item--right"></div>
+        </div>
+        <nav class="arrow-nav">
+          <button class="arrow-nav__item arrow-nav__item--prev">
+            <img src="../imgs/left.jpg" />
+          </button>
+          <button class="arrow-nav__item arrow-nav__item--next">
+            <img src="../imgs/right.jpg" />
+          </button>
+        </nav>
+        <!-- navigation -->
+        <nav class="nav">
+          <button class="nav__button">
+            <span class="nav__button-text"></span>
+          </button>
+          <h2 class="nav__chapter">—春风十里花远去 夏近叶成帷</h2>
+          <div class="toc">
+            <a class="toc__item" href="#entry-1">
+              <span class="toc__item-page">壹</span>
+              <span class="toc__item-title">—春风十里花远去 夏近叶成帷</span>
+            </a>
+            <a class="toc__item" href="#entry-2">
+              <span class="toc__item-page">贰</span>
+              <span class="toc__item-title">—瓜藤蔓夏 浮生田园</span>
+            </a>
+            <a class="toc__item" href="#entry-3">
+              <span class="toc__item-page">叁</span>
+              <span class="toc__item-title">—草盛虫鸣 夏日独有的风景</span>
+            </a>
+            <a class="toc__item" href="#entry-4">
+              <span class="toc__item-page">肆</span>
+              <span class="toc__item-title">—暮春消尽 初夏忽近</span>
+            </a>
+          </div>
+        </nav>
+        <!-- little sides -->
+        <div class="slideshow__indicator"></div>
+        <div class="slideshow__indicator"></div>
+      </div>
+      <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function () {
+          var e,
+            t = document.createElement("style");
+          return (
+            (t.innerHTML = "root: { --tmp-var: bold; }"),
+            document.head.appendChild(t),
+            (e = !!(
+              window.CSS &&
+              window.CSS.supports &&
+              window.CSS.supports("font-weight", "var(--tmp-var)")
+            )),
+            t.parentNode.removeChild(t),
+            e
+          );
+        };
+        supportsCssVars() ||
+          alert(
+            "Please view this demo in a modern browser that supports CSS Variables."
+          );
+      </script>
+    </main>
+    <script src="../js/imagesloaded.pkgd.min.js"></script>
+    <script src="../js/TweenMax.min.js"></script>
+    <script src="../js/demo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(246, 246, 246);
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+.main {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url("../imgs/bj.jpg");
+  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.b,
+.c,
+.d,
+.e {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /*滤镜函数 图像应用阴影效果 */
+  filter: drop-shadow(4px 4px 12px rbg(0, 0, 0, 0.5));
+  background-size: cover;
+  opacity: 0.7;
+  transition: 3s;
+}
+.b::after,
+.c::after,
+.d::after,
+.e::after {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url("../imgs/bj.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.b {
+  left: -35%;
+  transform: rotateZ(100deg);
+  overflow: hidden;
+}
+.b::after {
+  transform: rotateZ(-100deg);
+}
+.c {
+  left: -35%;
+  transform: rotateZ(-100deg);
+  overflow: hidden;
+}
+.c::after {
+  transform: rotateZ(100deg);
+}
+.d {
+  right: -35%;
+  transform: rotateZ(100deg);
+  overflow: hidden;
+}
+.d::after {
+  transform: rotateZ(-100deg);
+}
+.e {
+  right: -35%;
+  transform: rotateZ(-100deg);
+  overflow: hidden;
+}
+.e::after {
+  transform: rotateZ(100deg);
+}
+.f {
+  position: absolute;
+  opacity: 0;
+  font-size: 9vw;
+  font-family: STXingkai, sans-serif;
+  letter-spacing: 1.5vw;
+  color: rgb(61, 60, 60);
+  transition: 2s;
+}
+
+/* .main:hover .b {
+  left: -55%;
+}
+.main:hover .c {
+  left: -60%;
+}
+.main:hover .d {
+  right: -55%;
+}
+.main:hover .e {
+  right: -60%;
+}
+.main:hover .f {
+  opacity: 1;
+} */
+body:hover .b {
+  left: -55%;
+}
+body:hover .c {
+  left: -60%;
+}
+body:hover .d {
+  right: -55%;
+}
+body:hover .e {
+  right: -60%;
+}
+body:hover .f {
+  opacity: 1;
+}
+.tubiao {
+  position: absolute;
+  width: 22.5vw;
+  height: 22.5vw;
+  top: 8%;
+  left: 40%;
+}
+.ding {
+  position: absolute;
+  width: 4.5vw;
+  height: 4.5vw;
+  top: 19%;
+  left: 37%;
+  z-index: 3;
+}
+.biao {
+  position: absolute;
+  width: 8.5vw;
+  height: 8.5vw;
+  top: 10%;
+  left: 28%;
+  z-index: 2;
+}
+.wz {
+  position: absolute;
+  top: 4%;
+  font-size: 1.375vw;
+  font-family: STXingkai, sans-serif;
+  z-index: 2;
+}

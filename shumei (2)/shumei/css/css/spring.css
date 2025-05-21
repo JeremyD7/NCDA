@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: rgb(247, 247, 247);
+  background-image: url("../imgs/bj1.jpg");
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-origin: padding-box;
+  position: relative;
+}
+#gotop {
+  position: fixed;
+  width: 3.25vw;
+  height: 3.25vw;
+  border: 1px solid #c4c0c0;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3vw;
+  right: 5%;
+  bottom: 8%;
+  z-index: 4;
+  cursor: pointer;
+  display: none;
+}
+.box1 {
+  width: 10%;
+  height: 13.125vw;
+  float: left;
+  position: relative;
+  top: 8vw;
+  left: 2.5vw;
+  z-index: 4;
+  animation: box1 0.8s linear;
+}
+@keyframes box1 {
+  from {
+    transform: translateX(-5vw);
+  }
+}
+.box1 ul li {
+  color: rgb(124, 126, 125);
+  width: 40%;
+  height: 3.5vw;
+  list-style: none;
+  font-family: STKaiti;
+  font-size: 2vw;
+  padding-bottom: 0.8vw;
+}
+a,
+a:visited {
+  text-decoration: none;
+  color: rgb(124, 126, 125);
+  outline: none;
+}
+.box1 a:hover {
+  cursor: pointer;
+  color: #6aa793;
+}
+#item.active {
+  cursor: pointer;
+  color: #6aa793;
+  transform: scale(1.25);
+}
+
+#neirong {
+  width: 100%;
+  height: 100%;
+}
+#tabContent0 {
+  width: 90%;
+}
+
+#tabContent1 {
+  width: 100%;
+  height: 100%;
+}
+
+#tabContent2 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
+#tabContent3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}

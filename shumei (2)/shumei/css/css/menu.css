@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+.caidan a,
+.caidan a:visited,
+.caidan a:hover,
+.caidan a:active {
+  color: #191a1a;
+  text-decoration: none;
+}
+.buttom-menu {
+  position: absolute;
+  top: 0.75vw;
+  left: 1.5vw;
+  width: 4.5vw;
+  height: 4.5vw;
+  z-index: 99;
+}
+.checkbox {
+  position: absolute;
+  z-index: 99;
+  cursor: pointer;
+  width: 4.5vw;
+  height: 4.5vw;
+  opacity: 0;
+}
+
+.logo {
+  position: absolute;
+  width: 4vw;
+  height: 4vw;
+  text-align: center;
+  border: 0.2vw solid rgb(103, 147, 129);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.logo img {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  width: 3.4vw;
+  height: 3.4vw;
+  top: 0.15vw;
+  left: 0.1vw;
+  cursor: pointer;
+  /* 光标呈现为指示链接的指针（一只手） */
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* 元素是否对指针事件做出反应 */
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu div {
+  width: 100vw;
+  height: 5vw;
+  background-color: rgba(239, 239, 239, 0.4);
+  transition: all 0.5s linear;
+  flex: none;
+  transform: translateY(-6vw);
+  overflow: hidden;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* checked 伪类, checkbox选中状态 */
+.checkbox:checked ~ .menu {
+  pointer-events: auto;
+  /* 指针事件做出反应 */
+  visibility: visible;
+  /* 不可见的元素也会占据页面上的空间,元素是否可见 */
+}
+.checkbox:checked ~ .menu div {
+  transform: translateY(0);
+}
+
+.caidan {
+  list-style: none;
+  padding: 0;
+  padding-left: 5vw;
+}
+
+.caidan li {
+  margin: 1.5vw 2.75vw;
+  font-size: 1.75vw;
+  font-family: STFangsong, sans-serif;
+  float: left;
+}
+
+.caidan li:nth-child(1) {
+  margin-left: 3.5vw;
+}
+.caidan li:nth-child(3) {
+  margin-left: 42vw;
+}
+.caidan a {
+  position: relative;
+  display: inline;
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+.caidan li a:hover {
+  /* color: #8d8e8e; */
+  color: rgb(55, 170, 126);
+}
+.caidan a::before,
+.caidan a::after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+.caidan a::before {
+  right: -1vw;
+  top: 1vw;
+  border-bottom: 2px solid #909392;
+  border-right: 2px solid #909392;
+  transform: translate(-25%, -25%);
+}
+.caidan a:after {
+  left: -1vw;
+  bottom: 1vw;
+  border-top: 2px solid #909392;
+  border-left: 2px solid #909392;
+  transform: translate(25%, 25%);
+}
+.caidan a:hover:before,
+.caidan a:hover:after {
+  transform: translate(0, 0);
+  opacity: 1;
+}

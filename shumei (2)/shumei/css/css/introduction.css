@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: rgb(238, 236, 236);
+}
+.h1 {
+  font-size: 10vw;
+  font-family: STKaiti, sans-serif;
+  color: rgb(250, 250, 250);
+  transition: color 1.5s ease-in-out;
+}
+.showcase:hover .h1 {
+  color: rgb(120, 172, 150);
+}
+a {
+  text-decoration: none;
+}
+.showcase {
+  /* hyy */
+  /* height: 50vw; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* background-color: black; */
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background-color: black;
+}
+.video-container video {
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn {
+  display: inline-block;
+  color: rgb(250, 250, 250);
+  font-size: 1.5vw;
+  padding: 10px 20px;
+  border: 1px solid rgb(250, 250, 250);
+  font-family: Kaiti, sans-serif;
+  font-weight: 500;
+  margin-top: 20px;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.btn:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+#gotop {
+  position: fixed;
+  width: 3.25vw;
+  height: 3.25vw;
+  border: 1px solid #c4c0c0;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3vw;
+  right: 5%;
+  bottom: 8%;
+  z-index: 4;
+  cursor: pointer;
+  display: none;
+}
+#about {
+  width: 100%;
+  /* hyy */
+  /* height: 220vw; */
+  /* margin-top: 50px; */
+  height: 400vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../imgs/7.jpg);
+  background-size: 70%;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+.bj {
+  position: absolute;
+  right: 0;
+  bottom: 2%;
+  transform: rotateY(180deg);
+}
+.bj1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.bj2 {
+  position: absolute;
+  top: 62%;
+  right: 0;
+  z-index: 1;
+}
+.bj3 {
+  position: absolute;
+  top: 32%;
+  right: 6%;
+  z-index: 1;
+}
+.bj4 {
+  position: absolute;
+  top: 52%;
+  left: 8%;
+  z-index: 1;
+}
+.bj img {
+  width: 35vw;
+}
+.bj1 img {
+  width: 60vw;
+}
+.bj2 img {
+  width: 20vw;
+}
+.bj3 img {
+  width: 22vw;
+}
+.bj4 img {
+  width: 15vw;
+}
+.text ::before,
+.text ::after {
+  content: " ";
+  background: url("../imgs/6.jpg") no-repeat center;
+  background-size: cover;
+  width: 10vw;
+  height: 10vw;
+  transition: all 1.5s ease;
+  right: -5%;
+  top: 20%;
+  position: absolute;
+  transform: translate(-50%, 50%);
+}
+.text ::before {
+  right: -25%;
+  top: 0;
+}
+.text p:hover::before {
+  transform: translate(-25%, 25%);
+}
+.text p:hover:after {
+  transform: translate(0, 0);
+}
+.text1 ::before {
+  content: "";
+  background: url("../imgs/12.jpg") no-repeat center;
+  background-size: cover;
+  width: 15vw;
+  height: 10vw;
+  transition: all 1.5s ease;
+  left: -15%;
+  top: 70%;
+  position: absolute;
+  opacity: 1;
+}
+.text1:hover ::before {
+  transform: translate(25%, -50%);
+  opacity: 0;
+}
+.text3 ::after {
+  content: "";
+  background: url("../imgs/11.jpg") no-repeat center;
+  background-size: 90%;
+  width: 20vw;
+  height: 10vw;
+  transition: all 1.5s ease;
+  right: -10%;
+  top: 10%;
+  position: absolute;
+  opacity: 1;
+}
+.text3 p:hover:after {
+  transform: translate(-25%, 25%);
+  opacity: 0;
+}
+
+.text4 ::after {
+  content: "";
+  background: url("../imgs/14.jpg") no-repeat center;
+  background-size: 80%;
+  width: 25vw;
+  height: 20vw;
+  transition: all 2s ease;
+  right: -15%;
+  top: 10%;
+  position: absolute;
+  opacity: 1;
+  transform: translate(25%, -25%);
+}
+.text4 p:hover:after {
+  transform: translate(0, 0);
+  opacity: 0;
+}
+.tu {
+  position: absolute;
+  width: 25vw;
+  height: 25vw;
+  top: 10%;
+  left: -3%;
+  z-index: 1;
+}
+.tu img {
+  width: 25vw;
+  height: 25vw;
+  animation: tu 5s ease-in-out infinite;
+}
+@keyframes tu {
+  20% {
+    transform: rotate(2deg);
+    transform-origin: center bottom;
+  }
+  40% {
+    transform: rotate(-2deg);
+    transform-origin: center bottom;
+  }
+  60% {
+    transform: rotate(2deg);
+    transform-origin: center bottom;
+  }
+  80% {
+    transform: rotate(-2deg);
+    transform-origin: center bottom;
+  }
+  90%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: center bottom;
+  }
+}
+.context,
+.context1,
+.context2,
+.context3 {
+  position: absolute;
+  top: 0;
+  left: 17%;
+  width: 65vw;
+  display: flex;
+  /* height: 40vw; */
+  /* border: 5px solid rgb(208, 208, 208);
+  border-radius: 8px;
+  background-color: rgb(248, 248, 248, 0.6); */
+  /* hyy */
+  justify-content: center;
+  align-items: center;
+}
+.context1 {
+  top: 25%;
+}
+.context2 {
+  top: 50%;
+}
+.context3 {
+  top: 75%;
+}
+.text,
+.text1,
+.text3,
+.text4 {
+  /* position: absolute; */
+  /* top: 2%;
+  right: 16%; */
+  font-size: 1.75vw;
+  line-height: 3.25vw;
+  letter-spacing: 0.0625vw;
+  line-height: 4vw;
+  font-family: STKaiti, sans-serif;
+  width: 10vw;
+  height: 42vw;
+  writing-mode: vertical-rl; /*从左向右 从右向左是 writing-mode: vertical-rl;*/
+  /* hyy */
+  border: 5px solid rgb(208, 208, 208);
+  border-radius: 8px;
+  background-color: rgb(248, 248, 248, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.text1 {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* .text1 {
+  right: 0;
+  top: 10%;
+  font-size: 1.75vw; 
+  line-height: 3.25vw;
+  width: 15vw;
+  height: 32vw;
+} */
+.h {
+  /* position: absolute;
+  top: 30%;
+  right: 15%; */
+  font-size: 2.75vw;
+  color: black;
+  margin: 0 10px;
+  /* z-index: 2; */
+}
+.h5 {
+  /* position: absolute;
+  display: block;
+  right: 45%; */
+  border-right: 2px solid rgb(131, 126, 126);
+  margin-left: 40px;
+}
+.text1 p {
+  margin-top: 25px;
+}
+/* .text2 {
+  right: 20%;
+  top: 8%;
+  font-size: 1.5vw;
+  font-size: 1.75vw;
+  line-height: 4.5vw;
+  line-height: 3.25vw;
+  width: 66vw;
+  height: 39vw;
+  letter-spacing: 0.005vw;
+} */
+.text3,
+.text4 {
+  line-height: 4vw;
+  font-size: 1.625vw;
+}
+
+/* hyy */
+.page {
+  height: 100vh;
+  box-sizing: border-box;
+  /* width:100vw; */
+}
+body {
+  overflow: hidden;
+}
+.main {
+  top: 0;
+  position: relative;
+}
