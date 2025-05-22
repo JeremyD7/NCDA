@@ -4,14 +4,25 @@
   background-size: cover;
   background-position: center;
   position: fixed;
-  /* 改为fixed定位 */
   top: 0;
   left: 0;
   width: 100vw;
-  /* 使用视口宽度 */
   height: 100vh;
-  /* 使用视口高度 */
   z-index: -1;
+}
+
+.bg1 {
+  background-image: url(../assets/images/bg1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 90vh;
 }
 
 .header {
