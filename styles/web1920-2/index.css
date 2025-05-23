@@ -38,7 +38,7 @@
 .content-body {
     width: 100%;
     height: 123vw;
-    background-image: url(/assets/images-web1920-2/image.png2.svg);
+    background-image: url(/assets/images-web1920-2/image.png.webp);
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
@@ -69,7 +69,7 @@
     position: absolute;
     top: 5vw;
     left: 10vw;
-    background-image: url(/assets/images-web1920-2/红背景2.png);
+    background-image: url(/assets/images-web1920-2/bigred.png);
 }
 .context-box.context-box:nth-child(1){
     width: 54vw;
