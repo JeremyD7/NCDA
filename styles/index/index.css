@@ -4,7 +4,7 @@ html {
 
 .header {
   position: relative;
-  background-image: url(/assets/images/nav.svg);
+  background-image: url(../../assets/images/nav.svg );
   background-repeat: no-repeat;
   background-size: cover;
   height: 5vh;
@@ -19,7 +19,7 @@ html {
 .header__nav ul {
   display: flex;
 
-  gap: 55px;
+  gap: 5.5rem;
 }
 
 .header__nav ul li a {
@@ -36,18 +36,33 @@ html {
 .content {
   position: relative;
   z-index: 1;
-  background-image: url(/assets/images/bg1.svg);
+  background-image: url(../../assets/images/bg1.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100vw;
-  height: 260vh;
+  width: 164.2rem;
+  height: 309.1rem;
 }
 
 .foot {
   position: absolute;
   bottom: -2vh;
+
+
 }
+
+.foot img {
+  width: 100%;
+
+
+}
+
+footer img {
+  width: 164.2rem;
+
+
+}
+
 
 .content__imgfont {
   position: absolute;
@@ -58,12 +73,14 @@ html {
 .content__imgfont img {
   width: 90%;
   height: 90%;
+
 }
 
 .content__jj {
   position: absolute;
   top: 40%;
   left: 10%;
+
 
 }
 

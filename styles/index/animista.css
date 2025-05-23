@@ -5,12 +5,18 @@
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
-.content__imgfont {
-  animation: bounce-in-fwd 1.1s both;
-}
 
-#no1 {
+
+#no1,
+#no2,
+#no3,
+#no4,
+#no5,
+#no6,
+#no7 {
   animation: bounce-in-fwd 1.1s both;
+  animation-delay: 1s;
+
 }
 
 @-webkit-keyframes bounce-in-fwd {
