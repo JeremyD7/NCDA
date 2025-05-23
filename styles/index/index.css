@@ -1,3 +1,7 @@
+html {
+  font-size: 10px;
+}
+
 .header {
   position: relative;
   background-image: url(/assets/images/nav.svg);
@@ -77,4 +81,56 @@
 
   padding-left: 80px;
   box-sizing: border-box;
+}
+
+#no1,
+#no2,
+#no3,
+#no4,
+#no5,
+#no6,
+#no7 {
+  position: absolute;
+  animation: bounce-in-fwd 1.1s both;
+}
+
+#no7 {
+  left: 8.4rem;
+  top: 31.9rem;
+  z-index: -1;
+}
+
+#no2 {
+  left: 23.3rem;
+  top: 13.5rem;
+  z-index: 0;
+}
+
+#no6 {
+  left: 36.9rem;
+  top: 40.1rem;
+  z-index: 1;
+}
+
+#no1 {
+  left: 84.7rem;
+  top: 29.3rem;
+  z-index: 2;
+}
+
+#no5 {
+  left: 49.9rem;
+  top: 27.1rem;
+
+}
+
+#no3 {
+  left: 58.3rem;
+  top: 16.6rem;
+}
+
+#no4 {
+  left: 65.9rem;
+  top: 41.9rem;
+  z-index: 3;
 }
