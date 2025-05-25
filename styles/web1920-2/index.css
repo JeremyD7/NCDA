@@ -12,7 +12,7 @@
 .scrollimg {
     width: 100%;
     height: 38vw;
-    background-image: url(/assets/images-web1920-2/scroll.png);
+    background-image: url(/NCDA/assets/images-web1920-2/scroll.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -38,24 +38,26 @@
 .content-body {
     width: 100%;
     height: 123vw;
-    background-image: url(/assets/images-web1920-2/image.png.webp);
+    background-image: url(/NCDA/assets/images-web1920-2/image.png.webp);
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
     position: relative;
 }
-.imgbox{
+
+.imgbox {
     width: 58vw;
     height: 28vw;
     position: absolute;
     top: 5vw;
-    left:-2vw;
+    left: -2vw;
     z-index: 1;
 }
-.imgbox img{
+
+.imgbox img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 
@@ -69,38 +71,80 @@
     position: absolute;
     top: 5vw;
     left: 10vw;
-    background-image: url(/assets/images-web1920-2/bigred.png);
+    background-image: url(/NCDA/assets/images-web1920-2/bigred.png);
 }
-.context-box.context-box:nth-child(1){
+
+.context-box.context-box:nth-child(1) {
     width: 54vw;
     height: 18vw;
     position: absolute;
     top: 30vw;
     left: 3vw;
     border-radius: 45px;
-    background-color:rgba(205, 185, 166, 0.7);
+    background-color: rgba(205, 185, 166, 0.7);
     z-index: 1;
 }
-.context-box.context-box:nth-child(2){
+
+.context-box.context-box:nth-child(2) {
     width: 54vw;
     height: 18vw;
     position: absolute;
     top: 50vw;
     left: 23vw;
     border-radius: 45px;
-    background-color:rgba(205, 185, 166, 0.7);
+    background-color: rgba(205, 185, 166, 0.7);
     z-index: 1;
 }
-.context-box.context-box:nth-child(3){
+
+.context-box:nth-child(3) {
     width: 54vw;
     height: 18vw;
     position: absolute;
     top: 71vw;
     left: 3vw;
     border-radius: 45px;
-    background-color:rgba(205, 185, 166, 0.7);
+    background-color: rgba(205, 185, 166, 0.7);
     z-index: 1;
 }
+
+.context-img {
+    width: 17vw;
+    height: 17vw;
+    display: inline-block;
+
+}
+.context-img:nth-child(2) {
+    position: absolute;
+    right:0;
+    
+}
+.context-box:nth-child(2) {
+    padding-left: 2vw;
+}
+
+
+
+.context-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.context-text {
+    width: 35vw;
+    position: absolute;
+    top: 2vw; 
+    display: inline-block;
+    font-size: 20px;
+    line-height: 40px;
+    color: rgba(0, 0, 0, 1);
+    font-family: "思源黑体";
+    text-align: justify;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+
 
 
 
@@ -121,6 +165,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 2;
 }
 
 .footer {
@@ -128,5 +173,5 @@
     height: 4vw;
     margin: 0;
     padding: 0;
-    background-image: url(/assets//images-web1920-2/footer.png);
+    background-image: url(/NCDA/assets/images-web1920-2/footer.png);
 }
