@@ -2,6 +2,8 @@ html {
   font-size: 10px;
 }
 
+
+
 .header {
   position: relative;
   background-image: url(../../assets/images/nav.svg );
@@ -42,6 +44,45 @@ html {
   background-position: center;
   width: 164.2rem;
   height: 309.1rem;
+
+}
+
+.person {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transform: translateY(310%);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.person1 {
+
+  width: 31.4rem;
+  height: 65.6rem;
+
+
+}
+
+.person2 {
+
+  width: 31.4rem;
+  height: 65.6rem;
+}
+
+.person3 {
+
+  width: 31.4rem;
+  height: 65.6rem;
+}
+
+#p1,
+#p3 {
+  transform: translateY(-98%);
+}
+
+#p2 {
+  transform: translateY(-210%);
 }
 
 .foot {
