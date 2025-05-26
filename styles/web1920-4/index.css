@@ -1,0 +1,48 @@
+body {
+    background-size: cover;
+    background-image: url(/assets/images-web-1920-4/beijing.png);
+    position: relative;
+}
+
+
+
+.img {
+    width: 14vw;
+    height: 21vw;
+    position: absolute;
+}
+
+.img:nth-child(1) {
+    top: 5vw;
+    left: 33vw;
+}
+
+.img:nth-child(2) {
+    top: 5vw;
+    right: 32vw;
+
+}
+
+.img:nth-child(3) {
+    top: 29vw;
+    left: 23vw;
+}
+
+.img:nth-child(4) {
+
+    top: 29vw;
+    right: 42vw;
+}
+
+.img:nth-child(5) {
+
+    top: 29vw;
+    right: 21vw;
+}
+
+
+.img p {
+    margin-top: 1vw;
+    font-size: 2rem;
+    text-align: center;
+}
