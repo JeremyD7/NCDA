@@ -10,6 +10,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   height: 5vh;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,7 +43,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 164.2rem;
+  width: 165.9rem;
   height: 309.1rem;
 
 }
@@ -56,10 +57,52 @@ html {
   width: 100%;
 }
 
-.person1 {
+.person1 .small-bg {
+  position: absolute;
+  top: 0;
 
+}
+
+.fontimg1 {
+  position: absolute;
+  top: 1.6rem;
+  bottom: 1rem;
+  left: 10.8rem;
+  right: 10.1rem;
+}
+
+.fontimg2 {
+  position: absolute;
+  top: 2.5rem;
+  bottom: 2.5rem;
+  left: 10.1rem;
+
+}
+
+.fontimg3 {
+  position: absolute;
+  top: 1.4rem;
+  bottom: 1rem;
+  left: 10.1rem;
+
+}
+
+.person2 .small-bg {
+  position: absolute;
+  bottom: -1.5px;
+}
+
+.person3 .small-bg {
+  position: absolute;
+  top: 0;
+}
+
+
+.person1 {
+  box-sizing: border-box;
   width: 31.4rem;
   height: 65.6rem;
+
 
 
 }
@@ -99,7 +142,7 @@ html {
 }
 
 footer img {
-  width: 164.2rem;
+  width: 165.9rem;
 
 
 }
