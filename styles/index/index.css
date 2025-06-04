@@ -57,9 +57,39 @@ html {
   width: 100%;
 }
 
+.person1 .small-bg p {
+  width: 90%;
+  padding-top: 1.7rem;
+  padding-left: 1.7rem;
+  padding-right: 1.7rem;
+  padding-bottom: 1.7rem;
+}
+
+.person3 .small-bg p {
+  width: 90%;
+  padding-top: 1.7rem;
+  padding-left: 1.7rem;
+  padding-right: 1.7rem;
+  padding-bottom: 1.7rem;
+}
+
+.person2 .small-bg p {
+  position: absolute;
+  top: -23.3rem;
+  padding-top: 1.7rem;
+  padding-left: 1.7rem;
+  padding-right: 1.7rem;
+  padding-bottom: 1.7rem;
+
+
+
+}
+
 .person1 .small-bg {
   position: absolute;
   top: 0;
+  width: 31.5rem;
+  height: 7.5rem;
 
 }
 
@@ -67,8 +97,9 @@ html {
   position: absolute;
   top: 1.6rem;
   bottom: 1rem;
-  left: 10.8rem;
-  right: 10.1rem;
+  left: 10.1rem;
+  height: 4.6rem;
+
 }
 
 .fontimg2 {
@@ -90,11 +121,15 @@ html {
 .person2 .small-bg {
   position: absolute;
   bottom: -1.5px;
+  width: 31.5rem;
+  height: 7.5rem;
 }
 
 .person3 .small-bg {
   position: absolute;
   top: 0;
+  width: 31.5rem;
+  height: 7.5rem;
 }
 
 

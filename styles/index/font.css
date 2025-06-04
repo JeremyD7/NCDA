@@ -11,3 +11,16 @@
   font-size: 2.4rem;
   line-height: 6.3rem;
 }
+
+.small-bg p {
+  font-size: 1.9rem;
+  font-weight: 400;
+  text-indent: 1.5rem;
+  letter-spacing: 2px;
+  line-height: 2.8rem;
+  color: rgba(0, 0, 0, 1);
+  text-align: left;
+  vertical-align: top;
+
+
+}
