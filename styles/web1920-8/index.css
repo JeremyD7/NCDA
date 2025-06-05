@@ -36,16 +36,16 @@ nav {
 }
 
 .content {
-  width: 165.9rem;
+  width: 170.7rem;
   height: 307.1rem;
   background-image: url(../../assets/images/bg.svg);
   background-repeat: no-repeat;
-  background-size: auto;
+
 }
 
 .person {
   width: 100%;
-  height: 110.8rem;
+  height: 128rem;
   background-image: url(../../assets/images-web-1920-8/main1bg.webp);
 }
 
@@ -64,7 +64,7 @@ footer {
 }
 
 .foot1 {
-  width: 165.9rem;
+  width: 170.7rem;
   position: absolute;
   bottom: 6.5rem;
 }
@@ -74,7 +74,7 @@ footer {
 }
 
 .foot2 {
-  width: 165.9rem;
+  width: 170.7rem;
 }
 
 .foot2 img {
