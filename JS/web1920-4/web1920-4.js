@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
             this.parentElement.style.border = '5px solid rgba(0,0,0,1)';
             this.parentElement.style.borderRadius = '199px';
             const pE = this.nextElementSibling;
-            if (pE && pElement.tagName === 'P') {
+            // 修正变量名，判断下一个元素是否为 P 标签
+            if (pE && pE.tagName === 'P') {
                 pE.style.display = 'block';
             }
         });
@@ -20,8 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
             this.parentElement.style.border = '';
             this.parentElement.style.borderRadius = '';
             const pE = this.nextElementSibling;
-            if (pE && pElement.tagName === 'P') {
-                p.style.display = 'none';
+            // 修正变量名，判断下一个元素是否为 P 标签
+            if (pE && pE.tagName === 'P') {
+                pE.style.display = 'none';
             }
         });
     });
