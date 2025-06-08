@@ -1,0 +1,44 @@
+body {
+    background-color: pink;
+}
+
+.header {
+    width: 100%;
+    height: 4vw;
+}
+.header img {
+    width: 100%; /* 图片宽度为父元素的100% */
+    height: 100%; /* 图片高度为父元素的100% */
+    object-fit: cover; /* 保持图片比例不变，填充整个容器 */
+}
+.scrollimg{
+width: 100%;
+height: 38vw;
+background-image: url(../assets/images-2/矩形\ 2.svg);
+position: relative;
+}
+.buttombox{
+    width: 9vw;
+    height: 3vw;
+    /* margin-bottom: 1vw; */
+    position: absolute;
+    top:35vw;
+    left:47vw;
+}
+.buttom {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%; /* 圆角半径为容器高度的一半 */;
+    border: 0.1vw solid black; /* 边框宽度为容器高度的0.1倍 */
+    display: inline-block; 
+    background-color: rgba(204, 204, 204, 1);
+}
+.content-body{
+    width: 100%;
+    height: 123vw;
+    margin: 0;
+    padding: 0;
+    background-image: url(../assets/images-2/image.png.png);
+    background-repeat: no-repeat; /* 防止图片重复 */
+   
+}
