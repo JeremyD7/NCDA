@@ -2,6 +2,10 @@ html {
   font-size: 10px;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 
 
 .header {
@@ -43,7 +47,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 165.9rem;
+  width: 170.7rem;
   height: 309.1rem;
 
 }
@@ -177,7 +181,7 @@ html {
 }
 
 footer img {
-  width: 165.9rem;
+  width: 170.7rem;
 
 
 }

@@ -16,6 +16,10 @@ nav.addEventListener('click', function (e) {
   else if (e.target.tagName === 'A' && e.target.dataset.id === '4') {
     location.href = "html/web-1920-8.html"
   }
+  else {
+    location.href = "index.html"
+
+  }
   // console.log(e.target);
 
 })

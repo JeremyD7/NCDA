@@ -2,7 +2,9 @@ html {
   font-size: 10px;
 }
 
-
+body {
+  overflow-x: hidden;
+}
 
 nav {
   position: relative;
@@ -36,35 +38,222 @@ nav {
 }
 
 .content {
-  width: 165.9rem;
-  height: 307.1rem;
+  width: 170.7rem;
+  height: 380.1rem;
   background-image: url(../../assets/images/bg.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
+  background-repeat: repeat;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.chuan {
+  position: absolute;
+  left: -1rem;
+  top: 37.2rem;
+  width: 34.7rem;
+  opacity: 0.9;
+}
+
+.chuan img {
+  width: 100%;
 }
 
 .person {
   width: 100%;
-  height: 110.8rem;
+  height: 138rem;
   background-image: url(../../assets/images-web-1920-8/main1bg.webp);
 }
 
+.person1 {
+  position: absolute;
+  top: 47.7rem;
+  left: 35.4rem;
+
+}
+
+.person1 img {
+  width: 30.3rem;
+}
+
+.kuang {
+  position: absolute;
+  left: 36.2rem;
+  top: 83rem;
+}
+
+.kuang h3 {
+  position: absolute;
+  left: 8rem;
+  top: 10.5rem
+}
+
+.kuang2 {
+  position: absolute;
+  top: 68.4rem;
+  left: 116.1rem;
+}
+
+.kuang2 h3 {
+  position: absolute;
+  left: 9.2rem;
+  top: 12.5rem
+}
+
+.p1 {
+  position: absolute;
+  top: 101rem;
+  left: 31.4rem;
+  width: 37.8rem;
+  height: 27.8rem;
+}
+
+.p2 {
+  position: absolute;
+  top: 45.2rem;
+  left: 112.6rem;
+  width: 37.8rem;
+  height: 27.8rem;
+}
+
+.mid {
+  position: absolute;
+  left: 76.9rem;
+  top: 47.7rem;
+}
+
+.font {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+}
+
+.panda {
+  width: 128.4rem;
+  height: 42rem;
+  margin: 0 auto;
+  transform: translateX(-3%);
+}
+
+.person2 {
+  position: absolute;
+  top: 88rem;
+  bottom: 5rem;
+  left: 114rem;
+  z-index: 1;
+  height: 43.8rem;
+}
+
+.person2 img {
+  width: 30.3rem;
+
+}
+
+.cheng {
+  position: absolute;
+  top: 85rem;
+  left: 132rem;
+  z-index: 0;
+
+}
+
+.cheng img {
+  width: 52rem;
+  opacity: 0.9;
+
+}
+
 .main2box {
-  width: 136.6rem;
+  width: 140.6rem;
   height: 87.2rem;
-  margin: 23.2rem 14rem;
+  margin-top: 13.2rem;
+  margin-left: 17rem;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .main2box img {
   width: 100%;
 }
 
+.pmuseum {
+  margin: 10rem auto;
+}
+
+.puse {
+  margin: 10rem auto;
+}
+
+.museum1 {
+  position: absolute;
+  left: 10.9rem;
+  top: 10.6rem;
+  width: 42.4rem;
+  height: 56.7rem;
+}
+
+.museum2 {
+  position: absolute;
+  left: 40.5rem;
+  top: 25.9rem;
+  width: 39.5rem;
+  height: 33.3rem;
+}
+
+.pmain2 {
+  position: absolute;
+  left: 82.2rem;
+  top: 5rem;
+  width: 56.3rem;
+  height: 64rem;
+}
+
+.use1 {
+  position: absolute;
+  left: 10.1rem;
+  top: 284.3rem;
+  width: 426.57px;
+  height: 681.25px;
+}
+
+.use2 {
+  position: absolute;
+  left: 55.6rem;
+  top: 283.5rem;
+  width: 282px;
+  height: 348px;
+}
+
+.use3 {
+  position: absolute;
+  left: 83.8rem;
+  top: 283.5rem;
+  width: 283px;
+  height: 348px;
+
+}
+
+.use4 {
+  position: absolute;
+  left: 55.6rem;
+  top: 322.4rem;
+  width: 553.6px;
+  height: 300.41px;
+}
+
+.use5 {
+  position: absolute;
+  left: 114.9rem;
+  top: 284.3rem;
+  width: 426.57px;
+  height: 681.25px;
+}
+
 footer {
-  position: relative;
+  position: absolute;
 }
 
 .foot1 {
-  width: 165.9rem;
+  width: 170.7rem;
   position: absolute;
   bottom: 6.5rem;
 }
@@ -74,7 +263,7 @@ footer {
 }
 
 .foot2 {
-  width: 165.9rem;
+  width: 170.7rem;
 }
 
 .foot2 img {
