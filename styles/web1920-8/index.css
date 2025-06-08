@@ -169,6 +169,7 @@ nav {
   margin-left: 17rem;
   box-sizing: border-box;
   position: relative;
+
 }
 
 .main2box img {
@@ -207,45 +208,145 @@ nav {
   height: 64rem;
 }
 
+.show {
+  background-image: url(../../assets/images-web-1920-8/main2bg.webp);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto;
+  height: 95rem;
+}
+
 .use1 {
   position: absolute;
   left: 10.1rem;
   top: 284.3rem;
-  width: 426.57px;
-  height: 681.25px;
+  width: 42.657rem;
+  height: 68.125rem;
+  z-index: 0;
 }
+
+.main3box1:hover {
+  opacity: 1;
+}
+
+.main3box1 {
+  position: absolute;
+  width: 42.657rem;
+  height: 68.125rem;
+  transform: translateY(-100.4%);
+  background-color: rgba(166, 166, 166, 0.8);
+  z-index: 1;
+  opacity: 0;
+  transition: 1s;
+
+}
+
 
 .use2 {
   position: absolute;
-  left: 55.6rem;
-  top: 283.5rem;
-  width: 282px;
-  height: 348px;
+  left: 56rem;
+  top: 283.7rem;
+  width: 28.2rem;
+  height: 34.8rem;
+  z-index: 0;
 }
 
 .use3 {
   position: absolute;
-  left: 83.8rem;
-  top: 283.5rem;
-  width: 283px;
-  height: 348px;
+  left: 83rem;
+  top: 283.7rem;
+  width: 28.3rem;
+  height: 34.8rem;
+  z-index: 0;
 
+}
+
+.usebox {
+  position: relative;
+  width: 55.5rem;
+  height: 35rem;
+  top: 2rem;
+  left: 56rem;
+  background-color: rgba(166, 166, 166, 0.8);
+  z-index: 1;
+  opacity: 0;
+  transition: 1s;
+
+}
+
+.usebox:hover {
+  opacity: 1;
 }
 
 .use4 {
   position: absolute;
   left: 55.6rem;
   top: 322.4rem;
-  width: 553.6px;
-  height: 300.41px;
+  width: 55.4rem;
+  height: 30rem;
+
+
+}
+
+.use4box {
+  position: absolute;
+  width: 55.36rem;
+  height: 30.1rem;
+  left: 0rem;
+  top: 0rem;
+  background-color: rgba(166, 166, 166, 0.8);
+  opacity: 0;
+  transition: 1s;
+}
+
+.use4box:hover {
+  opacity: 1;
 }
 
 .use5 {
   position: absolute;
   left: 114.9rem;
   top: 284.3rem;
-  width: 426.57px;
-  height: 681.25px;
+  width: 42.657rem;
+  height: 68.125rem;
+}
+
+.use5box {
+  position: absolute;
+  width: 42.657rem;
+  height: 68.125rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(166, 166, 166, 0.8);
+  opacity: 0;
+  transition: 1s;
+}
+
+.use5box:hover {
+  opacity: 1;
+}
+
+.show .main3box1 p {
+  margin: 5rem 3rem;
+  width: 92%;
+
+}
+
+.show .use5box p {
+  margin: 5rem 3rem;
+  width: 92%;
+}
+
+#useboxp {
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+
+}
+
+.show .use4box p {
+  margin: 3rem 3rem;
+  width: 92%;
 }
 
 footer {

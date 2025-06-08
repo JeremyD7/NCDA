@@ -77,3 +77,14 @@
   font-weight: 400;
   letter-spacing: 0.6rem;
 }
+
+.show p {
+  font-size: 2.4rem;
+  font-weight: 400;
+  letter-spacing: 0.8rem;
+  line-height: 4rem;
+  color: rgba(0, 0, 0, 1);
+  text-align: left;
+  vertical-align: top;
+
+}
