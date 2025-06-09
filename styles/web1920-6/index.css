@@ -1,16 +1,19 @@
 li {
     list-style: none;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
     color: rgba(0, 0, 0, 1);
     line-height: 3vw;
 }
+
 .nav {
     width: 100%;
     height: 4vw;
@@ -18,7 +21,7 @@ a{
     position: relative;
 }
 
-.container {
+.nav-container {
     width: 32vw;
     height: 100%;
     display: flex;
@@ -40,21 +43,26 @@ a{
     cursor: pointer;
 }
 
-.nav-box:nth-child(3) {
+/* 使用 nth-of-type 选择器 */
+.nav-box:nth-of-type(3) {
     position: relative;
 }
 
-.nav-box:nth-child(3):hover {
+.nav-box:nth-of-type(3):hover {
     background-color: rgba(173, 70, 84, 0.5);
 }
 
-.nav-box:nth-child(3):hover .introduce {
+.nav-box:nth-of-type(3):hover .introduce {
     display: flex;
 }
 
 .introduce a:hover {
     background-color: rgba(173, 70, 84, 0.5);
 }
+
+.nav-box-third:hover .introduce {
+    display: flex;
+} 
 
 .introduce {
     position: absolute;
@@ -64,7 +72,7 @@ a{
     top: 4vw;
     display: none;
     text-align: center;
-
+    z-index: 1; 
 }
 
 .introduce a {
@@ -73,11 +81,11 @@ a{
     font-family: 阿里妈妈数黑体;
     letter-spacing: 6px;
     font-weight: 400;
-    display:inline-block;
+    display: inline-block;
     height: 100%;
     line-height: 3vw;
     margin: 0;
-    flex:1;
+    flex: 1;
 }
 
 
@@ -85,15 +93,116 @@ a{
 
 .body {
     width: 100%;
-    height: 53vw;
-    background-image: url(../../assets\images-web-1920-6\image.png.webp);
+    height: 80vw;
+    background-image: url(../../assets/images-web-1920-6/image.png.webp);
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
-.body-left{
-background-image: url(D:\HuaweiMoveData\Users\AIIURE\Desktop\NCDA\assets\images-web-1920-6\left.png);
+
+.body-left {
+    width: 52vw;
+    height: 52vw;
+    position: absolute;
+    top: 8vw;
+    left: -25vw
 }
-.body-right{
-    background-image: url(../../assets/images-web-1920-6/right.png);
+
+/* img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+.body-right {
+    width: 52vw;
+    height: 52vw;
+    position: absolute;
+    bottom: 0;
+    right: -26.5vw
 }
+
+.container {
+    width: auto;
+    height: 5vw;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+}
+#img{
+    width: 100%;
+    height: 5vw;
+    object-fit: cover;
+}
+.container:nth-of-type(2) {
+    top: 9vw;
+    left: 8.7vw;
+}
+.container:nth-of-type(3) {
+    top: 17vw;
+    left: 18.5vw;
+}
+.container:nth-of-type(4) {
+    top: 33vw;
+    left: 22.5vw;
+}
+.container:nth-of-type(5) {
+    top:51.2vw;
+    left: 11.2vw;
+}
+.container:nth-of-type(7) {
+    top:27.5vw;
+    right:7vw
+}
+#kongque {
+    top:41vw;
+    right:20.05vw
+    
+}
+#huanhua {
+    top:61vw;
+    right:22vw
+    
+} 
+#mingzu {
+   top:76vw;
+    right:9.8vw 
+}
+#bgimg{
+    z-index:999;
+}
+#denghuajin{
+    width: 7vw;
+    height: 2vw;
+}
+.text{
+    width: 6vw;
+    height: 4vw;
+    background-color: rgba(159,83,109,1);
+    margin-left: 1vw;
+    margin-right: 1vw;
+    text-align: center;
+    line-height: 4vw;
+    font-size: 1.2vw;
+    color:#ffffff;
+    margin-bottom: 4vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
