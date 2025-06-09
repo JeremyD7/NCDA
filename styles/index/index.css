@@ -9,12 +9,10 @@ body {
 
 
 .header {
-  position: relative;
   background-image: url(../../assets/images/nav.svg );
   background-repeat: no-repeat;
   background-size: cover;
   height: 5vh;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
