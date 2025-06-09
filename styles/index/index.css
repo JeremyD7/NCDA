@@ -47,8 +47,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 170.7rem;
-  height: 309.1rem;
+  width: 100vw;
+  /* height: 309.1rem; */
+  height: 340vh;
 
 }
 
@@ -124,7 +125,7 @@ body {
 
 .person2 .small-bg {
   position: absolute;
-  bottom: -1.5px;
+  bottom: -0.15rem;
   width: 31.5rem;
   height: 7.5rem;
 }
@@ -170,8 +171,7 @@ body {
 .foot {
   position: absolute;
   bottom: -2vh;
-
-
+  width: 100vw;
 }
 
 .foot img {
@@ -180,8 +180,12 @@ body {
 
 }
 
+footer {
+  width: 100vw;
+}
+
 footer img {
-  width: 170.7rem;
+  width: 100%;
 
 
 }
@@ -212,14 +216,14 @@ footer img {
   top: 40%;
   left: 30%;
   background-color: rgba(205, 185, 166, 1);
-  width: 750px;
-  height: 633px;
+  width: 75rem;
+  height: 63.3rem;
   top: 0;
   left: 90%;
   z-index: -1;
   opacity: 0.9;
 
-  padding-left: 80px;
+  padding-left: 8rem;
   box-sizing: border-box;
 }
 

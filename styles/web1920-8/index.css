@@ -38,10 +38,11 @@ nav {
 }
 
 .content {
-  width: 170.7rem;
-  height: 380.1rem;
+  width: 100vw;
+  height: 405vh;
   background-image: url(../../assets/images/bg.svg);
   background-repeat: repeat;
+  background-position: center;
   position: relative;
   box-sizing: border-box;
 }
@@ -354,7 +355,7 @@ footer {
 }
 
 .foot1 {
-  width: 170.7rem;
+  width: 100vw;
   position: absolute;
   bottom: 6.5rem;
 }
@@ -364,7 +365,7 @@ footer {
 }
 
 .foot2 {
-  width: 170.7rem;
+  width: 100vw
 }
 
 .foot2 img {
