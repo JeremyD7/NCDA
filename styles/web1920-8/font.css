@@ -1,5 +1,21 @@
+@font-face {
+  font-family: 'navfont';
+  src: url('../../assets/fonts/navfont.ttf');
+}
+
+@font-face {
+  font-family: 'text';
+  src: url('../../assets/fonts/text.ttf');
+}
+
+@font-face {
+  font-family: 'no1';
+  src: url('../../assets/fonts/no1.ttf');
+}
+
 .header__nav ul li a {
   font-size: 2rem;
+  font-family: 'navfont';
 }
 
 .kuang h3 {
@@ -10,6 +26,7 @@
   color: rgba(0, 0, 0, 1);
   text-align: left;
   vertical-align: top;
+  font-family: 'text';
 }
 
 .kuang2 h3 {
@@ -20,6 +37,7 @@
   color: rgba(0, 0, 0, 1);
   text-align: left;
   vertical-align: top;
+  font-family: 'text';
 }
 
 .p1 {
@@ -30,6 +48,7 @@
   color: rgba(0, 0, 0, 1);
   text-align: left;
   vertical-align: top;
+  font-family: 'text';
 }
 
 .p2 {
@@ -40,26 +59,29 @@
   color: rgba(0, 0, 0, 1);
   text-align: left;
   vertical-align: top;
+  font-family: 'text';
 }
 
 .pmuseum {
-  font-size: 4.8rem;
+  font-size: 5.8rem;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 6.653rem;
   color: rgba(0, 0, 0, 1);
   text-align: center;
   vertical-align: top;
+  font-family: 'no1';
 }
 
 .puse {
-  font-size: 4.8rem;
+  font-size: 5.8rem;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 6.653rem;
   color: rgba(0, 0, 0, 1);
   text-align: center;
   vertical-align: top;
+  font-family: 'no1';
 }
 
 .pmain2 {
@@ -70,11 +92,12 @@
   color: rgba(0, 0, 0, 1);
   text-align: left;
   vertical-align: top;
+  font-family: 'text';
 }
 
 .pmain2 span {
   font-size: 4.8rem;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.6rem;
 }
 
@@ -86,5 +109,6 @@
   color: rgba(0, 0, 0, 1);
   text-align: left;
   vertical-align: top;
+  font-family: 'text';
 
 }
