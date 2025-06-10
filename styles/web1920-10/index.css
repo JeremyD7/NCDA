@@ -4,7 +4,7 @@ html {
 
 body {
   overflow-y: hidden;
-  animation: scroll 5s infinite forwards;
+  animation: scroll 8s linear forwards;
 }
 
 nav {
