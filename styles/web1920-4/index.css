@@ -99,9 +99,36 @@ body {
     opacity: 100;
 }
 
-.img p {
-    margin-top: 1vw;
-    font-size: 2rem;
+#pt1 {
+    margin-top: 2vw;
+    font-size: 0.9vw;
+    text-align: center;
+}
+#pt2 {
+    margin-top: 2vw;
+    font-size: 0.9vw;
+    text-align: center;
+}
+#pt3 {
+    margin-top: 2vw;
+    font-size: 0.9vw;
+    text-align: center;
+}
+#pt4 {
+    margin-top: 2vw;
+    font-size: 0.9vw;
+    text-align: center;
+}
+#pt5 {
+    margin-top: 2vw;
+    font-size: 0.9vw;
+    text-align: center;
+}
+
+
+
+
+#text{
     text-align: center;
 }
 
@@ -128,4 +155,11 @@ body {
     margin-left: 2vw;
     margin-right: 2vw;
     display: none;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
