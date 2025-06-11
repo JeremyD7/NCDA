@@ -1,3 +1,55 @@
+.header {
+    background-image: url(../../assets/images/nav.svg );
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20% 0 5%;
+    z-index: 1;
+
+}
+
+.header__nav ul {
+    display: flex;
+
+    gap: 5.5rem;
+}
+
+.header__nav ul li a {
+    color: #060606;
+
+    font-weight: 500;
+}
+
+.header__nav ul li :hover {
+    color: rgba(173, 70, 84, 0.5)
+}
+
+.introduce {
+    position: absolute;
+    display: none;
+    width: 24vw;
+    height: 3vw;
+    top: 4.6rem;
+    right: 22rem;
+    background-color: rgba(205, 185, 166, 0.68);
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.introduce a {
+    color: rgba(0, 0, 0, 1);
+
+}
+
+.introduce a:hover {
+    color: rgba(173, 70, 84, 0.5)
+}
+
 body {
     background-size: cover;
     background-image: url(../../assets/images-web-1920-4/beijing.png);
