@@ -174,14 +174,14 @@
 #people1 {
     top: 31vw;
     left: 19vw;
-    background-image: url(../../assets/images-web1920-2/圆形\ 2@2x.png);
+    background-image: url(../../assets/images-web1920-2/圆形\ 2\ \(2\).png);
     background-size: cover;
 }
 
 #people2 {
     top: 31vw;
     left: 47vw;
-    background-image: url(../../assets/images-web1920-2/圆形\ 12@2x.png);
+    background-image: url(../../assets/images-web1920-2/圆形\ 12@2x\ \(1\).png);
     background-size: cover;
 }
 
@@ -189,17 +189,30 @@
 
     top: 52vw;
     left: 33vw;
-    background-image: url(../../assets/images-web1920-2/圆形\ 11@2x.png);
+    background-image: url(../../assets/images-web1920-2/圆形\ 11\ \(1\).png);
     background-size: cover;
 }
 
 #people4 {
     top: 52vw;
     left: 62vw;
-    background-image: url(../../assets/images-web1920-2/圆形\ 10@2x.png);
+    background-image: url(../../assets/images-web1920-2/圆形\ 10@2x\ \(1\).png);
     background-size: cover;
 }
+.xiaoren{
+    width: 68vw;
+    height: 10vw;
+    position: absolute;
+    z-index: 430;
+     top:46vw;
+    left: 15vw;
+}
 
+.xiaoren img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
 
 
 
