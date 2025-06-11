@@ -1,0 +1,11 @@
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-82vw);
+  }
+
+  /* 移动距离 = 总内容宽 - 容器宽（如182vw-100vw=82vw） */
+}

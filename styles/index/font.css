@@ -1,26 +1,58 @@
 .header__nav ul li a {
   font-size: 2rem;
+  font-family: 'navfont', sans-serif;
+
 }
 
 .jj-box p span {
   font-size: 3.6rem;
+  font-family: 'text';
 
 }
 
 .jj-box p {
   font-size: 2.4rem;
   line-height: 6.3rem;
+  font-family: 'text';
 }
 
 .small-bg p {
   font-size: 1.9rem;
   font-weight: 400;
   text-indent: 1.5rem;
-  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
   line-height: 2.8rem;
   color: rgba(0, 0, 0, 1);
   text-align: left;
   vertical-align: top;
+  font-family: 'text';
 
+
+}
+
+@font-face {
+  font-family: 'no1';
+  src: url('../../assets/fonts/no1.ttf');
+}
+
+@font-face {
+  font-family: 'navfont';
+  src: url('../../assets/fonts/navfont.ttf');
+}
+
+@font-face {
+  font-family: 'text';
+  src: url('../../assets/fonts/text.ttf');
+}
+
+.content__jj .jj {
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 6.653rem;
+  color: rgba(0, 0, 0, 1);
+  text-align: left;
+  vertical-align: top;
+
+  font-family: 'no1', sans-serif;
 
 }

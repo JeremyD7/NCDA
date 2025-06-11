@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'navfont';
+  src: url('../../assets/fonts/navfont.ttf');
+}
+
+.header__nav ul li a {
+  font-size: 2rem;
+  font-family: 'navfont';
+}
