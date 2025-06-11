@@ -39,6 +39,29 @@ nav {
 
 }
 
+.introduce {
+  position: absolute;
+  display: none;
+  width: 24vw;
+  height: 3vw;
+  top: 4.6rem;
+  right: 22rem;
+  background-color: rgba(205, 185, 166, 0.68);
+  justify-content: space-around;
+  align-items: center;
+
+
+}
+
+.introduce a {
+  color: rgba(0, 0, 0, 1);
+
+}
+
+.introduce a:hover {
+  color: rgba(173, 70, 84, 0.5)
+}
+
 .content {
   width: 182vw;
   height: 95vh;
