@@ -1,11 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-li{
+
+li {
     list-style: none;
 }
-html, body {
-    height: auto; 
+
+html,
+body {
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 10px;
 }

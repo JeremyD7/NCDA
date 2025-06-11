@@ -7,3 +7,35 @@
   font-size: 2rem;
   font-family: 'navfont';
 }
+
+@font-face {
+  font-family: 'no1';
+  src: url('../../assets/fonts/no1.ttf');
+}
+
+@font-face {
+  font-family: 'navfont';
+  src: url('../../assets/fonts/navfont.ttf');
+}
+
+@font-face {
+  font-family: 'text';
+  src: url('../../assets/fonts/text.ttf');
+}
+
+.header__nav ul li a {
+  font-size: 2rem;
+  font-family: 'navfont', sans-serif;
+
+}
+
+.introduce a {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.6rem;
+  line-height: 4rem;
+  color: rgba(128, 128, 128, 1);
+  text-align: left;
+  vertical-align: top;
+  font-family: 'navfont', sans-serif;
+}
