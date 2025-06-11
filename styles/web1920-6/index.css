@@ -43,26 +43,21 @@ a {
     cursor: pointer;
 }
 
-/* 使用 nth-of-type 选择器 */
-.nav-box:nth-of-type(3) {
+.nav-box:nth-child(3) {
     position: relative;
 }
 
-.nav-box:nth-of-type(3):hover {
+.nav-box:nth-child(3):hover {
     background-color: rgba(173, 70, 84, 0.5);
 }
 
-.nav-box:nth-of-type(3):hover .introduce {
+.nav-box:nth-child(3):hover .introduce {
     display: flex;
 }
 
 .introduce a:hover {
     background-color: rgba(173, 70, 84, 0.5);
 }
-
-.nav-box-third:hover .introduce {
-    display: flex;
-} 
 
 .introduce {
     position: absolute;
@@ -72,7 +67,7 @@ a {
     top: 4vw;
     display: none;
     text-align: center;
-    z-index: 1; 
+
 }
 
 .introduce a {
@@ -81,46 +76,46 @@ a {
     font-family: 阿里妈妈数黑体;
     letter-spacing: 6px;
     font-weight: 400;
-    display: inline-block;
+    display:inline-block;
     height: 100%;
     line-height: 3vw;
     margin: 0;
-    flex: 1;
+    flex:1;
+    z-index: 12;
+    background-color: rgba(205, 185, 166, 0.68);
 }
 
 
 
+html, body {
+    overflow-x: hidden; 
+}
 
 .body {
     width: 100%;
-    height: 80vw;
+    height: 110vw;
     background-image: url(../../assets/images-web-1920-6/image.png.webp);
     position: relative;
-    display: flex;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .body-left {
-    width: 52vw;
-    height: 52vw;
+    width: 50vw;
+    height: 50vw;
     position: absolute;
     top: 8vw;
-    left: -25vw
+    left: -30vw;
+    border-radius: 50%;
 }
 
-/* img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
+
 
 .body-right {
-    width: 52vw;
-    height: 52vw;
+    width: 50vw;
+    height: 50vw;
     position: absolute;
-    bottom: 0;
-    right: -26.5vw
+    bottom:20vw;
+    right: -16.5vw;
 }
 
 .container {
@@ -136,41 +131,41 @@ a {
     object-fit: cover;
 }
 .container:nth-of-type(2) {
-    top: 9vw;
-    left: 8.7vw;
+    top: 8vw;
+    left: 9.7vw;
 }
 .container:nth-of-type(3) {
-    top: 17vw;
-    left: 18.5vw;
+    top: 24vw;
+    left: 29.5vw;
 }
 .container:nth-of-type(4) {
-    top: 33vw;
-    left: 22.5vw;
+    top: 47vw;
+    left: 31.8vw;
 }
 .container:nth-of-type(5) {
-    top:51.2vw;
+    top:69vw;
     left: 11.2vw;
 }
-.container:nth-of-type(7) {
-    top:27.5vw;
-    right:7vw
+#yusi {
+    top:39.8vw;
+    right:5vw
 }
 #kongque {
-    top:41vw;
-    right:20.05vw
+    top:61vw;
+    right:27.05vw
     
 }
 #huanhua {
-    top:61vw;
-    right:22vw
+    top:81vw;
+    right:28.8vw
     
 } 
 #mingzu {
-   top:76vw;
+   top:104vw;
     right:9.8vw 
 }
 #bgimg{
-    z-index:999;
+    z-index:9;
 }
 #denghuajin{
     width: 7vw;
@@ -189,7 +184,23 @@ a {
     margin-bottom: 4vw;
 }
 
+.tempimg{
+    z-index:10;
+    position:absolute;
+}
+#temp1{
+bottom:-23vw;
+left:-5vw;
+}
+#temp2{
+top:-27vw;
+right:-10vw;
+}
+.explain{
+    width: 10vw;
+    height: 6vw;
 
+}
 
 
 
