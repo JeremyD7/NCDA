@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'no1';
+  src: url('../../assets/fonts/no1.ttf');
+}
+
+@font-face {
+  font-family: 'navfont';
+  src: url('../../assets/fonts/navfont.ttf');
+}
+
+@font-face {
+  font-family: 'text';
+  src: url('../../assets/fonts/text.ttf');
+}
+
+.header__nav ul li a {
+  font-size: 2rem;
+  font-family: 'navfont', sans-serif;
+
+}
+
+.introduce a {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.6rem;
+  line-height: 4rem;
+  color: rgba(128, 128, 128, 1);
+  text-align: left;
+  vertical-align: top;
+  font-family: 'navfont', sans-serif;
+}
+
+.text {
+  width: 6vw;
+  height: 4vw;
+  background-color: rgba(159, 83, 109, 1);
+  margin-left: 1vw;
+  margin-right: 1vw;
+  text-align: center;
+  line-height: 4vw;
+  font-size: 1.2vw;
+  color: #ffffff;
+  margin-bottom: 4vw;
+  font-family: 'text';
+}
+
+.explain {
+
+  margin-left: 1vw;
+  margin-right: 1vw;
+  text-align: center;
+  line-height: 2vw;
+  font-size: 1.2vw;
+  color: rgba(130, 86, 48, 1);
+
+  font-family: 'text';
+}
