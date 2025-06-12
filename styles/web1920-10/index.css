@@ -4,10 +4,10 @@ html {
 
 body {
   overflow-y: hidden;
-  animation: scroll 8s linear forwards;
+  /* animation: scroll 8s linear forwards; */
 }
 
-nav {
+/* nav {
   position: relative;
   background-image: url(../../assets/images/nav.svg );
   background-repeat: no-repeat;
@@ -60,21 +60,22 @@ nav {
 
 .introduce a:hover {
   color: rgba(173, 70, 84, 0.5)
-}
+} */
 
 .content {
   width: 182vw;
-  height: 95vh;
+  height: 100vh;
   background: linear-gradient(to top, rgba(173, 70, 84, 1), rgba(173, 70, 84, 0));
-  /* display: flex;
-  justify-content: start; */
   position: relative;
 }
 
 .step1 {
   position: absolute;
-  height: 95vh;
-  top: 0rem;
+  width: 40vw;
+  height: 70rem;
+  /* top: 40rem; */
+  bottom: 0;
+
   left: 0;
 }
 
@@ -85,37 +86,170 @@ nav {
 
 .step2 {
   position: absolute;
-  height: 95vh;
-  top: 0rem;
-  left: 69.5rem;
+  width: 40vw;
+  height: 70rem;
+  bottom: 0;
+  left: 70rem;
+  z-index: 1;
 }
 
 .step2 img {
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 .step3 {
   position: absolute;
-  height: 120rem;
-  width: 100rem;
-  top: -22rem;
-  left: 137rem;
+  width: 60vw;
+  height: 70rem;
+  bottom: 0rem;
+
+  left: 140rem;
+  z-index: 1;
 }
 
 .step3 img {
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 .step4 {
   position: absolute;
-  height: 95vh;
-  top: 0;
+  width: 40vw;
+  height: 70rem;
   left: 242rem;
+  bottom: 0;
 }
 
 .step4 img {
   width: 100%;
   height: 100%;
+}
+
+.deng {
+  height: 38rem;
+  width: 30rem;
+  transition: transform 0.5s;
+}
+
+.deng:hover {
+  transform: scale(1.2);
+}
+
+.explain1 {
+  position: relative;
+}
+
+.explain1 h3 {
+  position: absolute;
+  left: 31.5rem;
+  top: -30rem;
+}
+
+.explain1 p {
+  position: absolute;
+  left: 40rem;
+  top: -37rem;
+}
+
+.explain1 .up {
+  position: absolute;
+  top: -35rem;
+  left: 30rem;
+}
+
+.explain1 .down {
+  position: absolute;
+  top: -25rem;
+  left: 30rem;
+}
+
+.explain2 {
+  position: relative;
+}
+
+.explain2 h3 {
+  position: absolute;
+  left: 81.5rem;
+  top: -30rem;
+
+}
+
+.explain2 p {
+  position: absolute;
+  left: 90rem;
+  top: -37rem;
+  z-index: 10;
+}
+
+.explain2 .up {
+  position: absolute;
+  top: -35rem;
+  left: 80rem;
+}
+
+.explain2 .down {
+  position: absolute;
+  top: -15rem;
+  left: 80rem;
+}
+
+.explain3 {
+  position: relative;
+}
+
+.explain3 h3 {
+  position: absolute;
+  left: 151.5rem;
+  top: -30rem;
+}
+
+.explain3 p {
+  position: absolute;
+  left: 155rem;
+  top: -37rem;
+  z-index: 10;
+}
+
+.explain3 .up {
+  position: absolute;
+  top: -35rem;
+  left: 150rem;
+}
+
+.explain3 .down {
+  position: absolute;
+  top: -20rem;
+  left: 150rem;
+}
+
+.explain4 {
+  position: relative;
+}
+
+.explain4 h3 {
+  position: absolute;
+  left: 241.5rem;
+  top: -30rem;
+  z-index: 2;
+}
+
+.explain4 p {
+  position: absolute;
+  left: 245rem;
+  top: -37rem;
+}
+
+.explain4 .up {
+  position: absolute;
+  top: -35rem;
+  left: 240rem;
+}
+
+.explain4 .down {
+  position: absolute;
+  top: -25rem;
+  left: 240rem;
 }
