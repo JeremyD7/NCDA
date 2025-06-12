@@ -39,3 +39,91 @@
   vertical-align: top;
   font-family: 'navfont', sans-serif;
 }
+
+.explain1 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 2.5rem;
+  color: rgba(0, 0, 0, 1);
+  text-align: left;
+  vertical-align: top;
+  writing-mode: vertical-lr;
+}
+
+.explain1 h3 {
+  letter-spacing: 1rem;
+  font-family: 'no1';
+}
+
+.explain1 p {
+  letter-spacing: 0.5rem;
+  line-height: 5rem;
+  font-family: 'no1';
+}
+
+.explain2 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 2.5rem;
+  color: rgba(0, 0, 0, 1);
+  text-align: left;
+  vertical-align: top;
+  writing-mode: vertical-lr;
+}
+
+.explain2 h3 {
+  letter-spacing: 1rem;
+  font-family: 'no1';
+}
+
+.explain2 p {
+  letter-spacing: 0.5rem;
+  line-height: 5rem;
+  font-family: 'no1';
+}
+
+.explain3 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 2.5rem;
+  color: rgba(0, 0, 0, 1);
+  text-align: left;
+  vertical-align: top;
+  writing-mode: vertical-lr;
+}
+
+.explain3 h3 {
+  letter-spacing: 1rem;
+  font-family: 'no1';
+}
+
+.explain3 p {
+  letter-spacing: 0.5rem;
+  line-height: 5rem;
+  font-family: 'no1';
+}
+
+.explain4 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 2.5rem;
+  color: rgba(0, 0, 0, 1);
+  text-align: left;
+  vertical-align: top;
+  writing-mode: vertical-lr;
+}
+
+.explain4 h3 {
+  letter-spacing: 1rem;
+  font-family: 'no1';
+}
+
+.explain4 p {
+  letter-spacing: 0.5rem;
+  line-height: 5rem;
+  font-family: 'no1';
+}
