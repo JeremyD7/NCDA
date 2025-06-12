@@ -8,274 +8,348 @@
     height: 100%;
     object-fit: cover;
 } */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .header {
-    background-image: url(../../assets/images/nav.svg );
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 5vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20% 0 5%;
-    z-index: 1;
-
+  background-image: url(../../assets/images/nav.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20% 0 5%;
+  z-index: 1;
 }
 
 .header__nav ul {
-    display: flex;
+  display: flex;
 
-    gap: 5.5rem;
+  gap: 5.5rem;
 }
 
 .header__nav ul li a {
-    color: #060606;
+  color: #060606;
 
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .header__nav ul li :hover {
-    color: #754f27;
-
+  color: #754f27;
 }
 
 .scrollimg {
-    width: 100%;
-    height: 38vw;
-    background-image: url(../../assets/images-web1920-2/矩形\ 2@2x.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  width: 100%;
+  height: 38vw;
+  background-image: url(../../assets/images-web1920-2/si.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .buttombox {
-    position: absolute;
-    top: 35.5vw;
-    left: 47vw;
-    width: 9vw;
-    height: 3vw;
-    display: flex;
-    justify-content: space-between;
+  position: absolute;
+  top: 35.5vw;
+  left: 47vw;
+  width: 9vw;
+  height: 3vw;
+  display: flex;
+  justify-content: space-between;
 }
 
 .buttom {
-    width: 1vw;
-    height: 1vw;
-    border-radius: 50%;
-    background-color: rgba(204, 204, 204, 1);
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  background-color: rgba(204, 204, 204, 1);
 }
 
 .content-body {
-    width: 100%;
-    height: 173vw;
-    background-image: url(../../assets/images-web1920-2/image.png.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    position: relative;
+  width: 100%;
+  height: 173vw;
+  background-image: url(../../assets/images-web1920-2/beijing.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  position: relative;
 }
 
 .imgbox {
-    width: 58vw;
-    height: 28vw;
-    position: absolute;
-    top: 5vw;
-    left: -2vw;
-    z-index: 1;
+  width: 58vw;
+  height: 28vw;
+  position: absolute;
+  top: 5vw;
+  left: -2vw;
+  z-index: 1;
 }
 
 .imgbox img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .img-explain {
-    width: 26vw;
-    height: 24vw;
-    position: absolute;
-    top: 7vw;
-    right: 16vw;
-    z-index: 500;
-    letter-spacing: 0.3rem;
-    font-weight: 400;
-    font-size: 2.4rem;
-    font-family: 'text';
+  width: 26vw;
+  height: 24vw;
+  position: absolute;
+  top: 7vw;
+  right: 16vw;
+  z-index: 500;
+  letter-spacing: 0.3rem;
+  font-weight: 400;
+  font-size: 1.1vw;
+  font-family: "text";
 }
 
-
-
-
 .context-container {
-    width: 78vw;
-    height: 152vw;
-    position: absolute;
-    top: 5vw;
-    left: 10vw;
-    background-image: url(../../assets/images-web1920-2/分组\ 7\ \(1\).png);
+  width: 78vw;
+  height: 152vw;
+  position: absolute;
+  top: 5vw;
+  left: 10vw;
+  background-image: url(../../assets/images-web1920-2/red-beijng.png);
 }
 
 .context-box.context-box:nth-child(1) {
-    width: 54vw;
-    height: 18vw;
-    position: absolute;
-    bottom: 63vw;
-    left: 3vw;
-    border-radius: 45px;
-    background-color: rgba(205, 185, 166, 0.7);
-    z-index: 1;
+  width: 54vw;
+  height: 18vw;
+  position: absolute;
+  bottom: 63vw;
+  left: 3vw;
+  border-radius: 45px;
+  background-color: rgba(205, 185, 166, 0.7);
+  z-index: 1;
 }
 
 .context-box.context-box:nth-child(2) {
-    width: 54vw;
-    height: 18vw;
-    position: absolute;
-    bottom: 36vw;
-    left: 20vw;
-    border-radius: 45px;
-    background-color: rgba(205, 185, 166, 0.7);
-    z-index: 1;
+  width: 54vw;
+  height: 18vw;
+  position: absolute;
+  bottom: 36vw;
+  left: 20vw;
+  border-radius: 45px;
+  background-color: rgba(205, 185, 166, 0.7);
+  z-index: 1;
 }
 
 .context-box:nth-child(3) {
-    width: 54vw;
-    height: 18vw;
-    position: absolute;
-    bottom: 10vw;
-    left: 3vw;
-    border-radius: 45px;
-    background-color: rgba(205, 185, 166, 0.7);
-    z-index: 1;
+  width: 54vw;
+  height: 18vw;
+  position: absolute;
+  bottom: 10vw;
+  left: 3vw;
+  border-radius: 45px;
+  background-color: rgba(205, 185, 166, 0.7);
+  z-index: 1;
 }
 
 .context-img {
-    width: 17vw;
-    height: 17vw;
-    display: inline-block;
-
+  width: 17vw;
+  height: 17vw;
+  display: inline-block;
 }
 
 .context-img:nth-child(2) {
-    position: absolute;
-    right: 0;
-
+  position: absolute;
+  right: 0;
 }
 
 .context-box:nth-child(2) {
-    padding-left: 2vw;
+  padding-left: 2vw;
 }
 
-
-
 .context-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .context-text {
-    width: 35vw;
-    position: absolute;
-    top: 2vw;
-    display: inline-block;
-    font-size: 0.9vw;
-    line-height: 3.4rem;
-    color: rgba(0, 0, 0, 1);
-    font-family: "text";
-    text-align: justify;
-    font-weight: 400;
-    letter-spacing: 0.3rem;
+  width: 35vw;
+  position: absolute;
+  top: 2vw;
+  display: inline-block;
+  font-size: 0.9vw;
+  line-height: 3.4rem;
+  color: rgba(0, 0, 0, 1);
+  font-family: "text";
+  text-align: justify;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
 }
 
-
 .people {
-    width: 21vw;
-    height: 21vw;
-    position: absolute;
-    border-radius: 50%;
-    z-index: 440;
+  width: 21vw;
+  height: 21vw;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 440;
+  display: block;
 }
 
 .people img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #people1 {
-    top: 31vw;
-    left: 19vw;
-    background-image: url(../../assets/images-web1920-2/圆形\ 2\ \(2\).png);
-    background-size: cover;
+  top: 31vw;
+  left: 19vw;
+
+  background-size: cover;
 }
 
 #people2 {
-    top: 31vw;
-    left: 47vw;
-    background-image: url(../../assets/images-web1920-2/圆形\ 12@2x\ \(1\).png);
-    background-size: cover;
+  top: 31vw;
+  left: 47vw;
+
+  background-size: cover;
 }
 
 #people3 {
+  top: 52vw;
+  left: 33vw;
 
-    top: 52vw;
-    left: 33vw;
-    background-image: url(../../assets/images-web1920-2/圆形\ 11\ \(1\).png);
-    background-size: cover;
+  background-size: cover;
 }
 
 #people4 {
-    top: 52vw;
-    left: 62vw;
-    background-image: url(../../assets/images-web1920-2/圆形\ 10@2x\ \(1\).png);
-    background-size: cover;
-}
-.xiaoren{
-    width: 68vw;
-    height: 10vw;
-    position: absolute;
-    z-index: 430;
-     top:46vw;
-    left: 15vw;
-}
+  top: 52vw;
+  left: 62vw;
 
-.xiaoren img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
+  background-size: cover;
+}
+.xiaoren {
+  width: 68vw;
+  height: 10vw;
+  position: absolute;
+  z-index: 430;
+  top: 46vw;
+  left: 15vw;
 }
 
+.xiaoren img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+.xiaoren-container {
+  width: 21vw;
+  height: 21vw;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 440;
+  transition: opacity 0.3s ease;
+}
 
+.bei {
+  border-radius: 50%;
+  display: none;
+}
+.bei-p {
+  width: 15.6vw;
+  height: 10vw;
+  margin: 0 auto;
+  margin-top: 4vw;
+  font-size: 0.9vw;
+}
+.bei-people {
+  width: 5.5vw;
+  height: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1vw;
+  margin-left: 8vw;
+  margin-right: 8vw;
+}
+.bei-people img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+#fix {
+  margin-top: -1vw;
+}
+#bei-1 {
+  width: 21vw;
+  height: 21vw;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 440;
+  background: rgba(214, 214, 214, 1);
+  top: 31vw;
+  left: 19vw;
+  background-image: url(../../assets/images-web1920-2/zhan.png);
+  background-position: center;
+  background-size: cover;
+}
+#bei-2 {
+  width: 21vw;
+  height: 21vw;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 440;
+  background: rgba(227, 203, 176, 1);
+  top: 31vw;
+  left: 47vw;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../../assets/images-web1920-2/han.png);
+}
+#bei-3 {
+  width: 21vw;
+  height: 21vw;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 440;
+  background: rgba(197, 217, 201, 1);
+  top: 52vw;
+  left: 33vw;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../../assets/images-web1920-2/tang.png);
+}
 
-
-
-
-
-
-
-
-
+#bei-4 {
+  width: 21vw;
+  height: 21vw;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 440;
+  background: rgba(197, 222, 217, 1);
+  top: 52vw;
+  left: 62vw;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../../assets/images-web1920-2/song.png);
+}
 
 .bolang {
-    width: 100%;
-    height: 8vw;
-    position: absolute;
-    bottom: 0;
+  width: 100%;
+  height: 8vw;
+  position: absolute;
+  bottom: 0;
 }
 
 .bolang img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
 }
 
 .footer {
-    width: 100%;
-    height: 4vw;
-    margin: 0;
-    padding: 0;
-    background-image: url(../../assets/images-web1920-2/footer.png);
+  width: 100%;
+  height: 4vw;
+  margin: 0;
+  padding: 0;
+  background-image: url(../../assets/images-web1920-2/footer.png);
 }
