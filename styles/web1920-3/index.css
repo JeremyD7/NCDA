@@ -2,7 +2,7 @@ li {
   list-style: none;
 }
 
-li a {
+a {
   text-decoration: none;
 }
 .nav {
@@ -34,13 +34,13 @@ li a {
 
 .header__nav ul {
   display: flex;
-
+  margin-top: 1rem;
   gap: 5.5rem;
 }
 
 .header__nav ul li a {
   color: #060606;
-
+  text-decoration: none;
   font-weight: 500;
 }
 
@@ -58,10 +58,12 @@ li a {
   background-color: rgba(205, 185, 166, 0.68);
   justify-content: space-around;
   align-items: center;
+  z-index: 100;
 }
 
 .introduce a {
   color: rgba(0, 0, 0, 1);
+  text-decoration: none;
 }
 
 .introduce a:hover {
@@ -235,15 +237,19 @@ body.modal-open {
   margin-right: 3vw;
 }
 
+<<<<<<< HEAD
 .left-p-box {
   margin-top: 4vw;
 }
 
+=======
+>>>>>>> main
 .ui-img {
   width: 1vw;
   height: 1vw;
   border-radius: 50%;
 }
+<<<<<<< HEAD
 .ui-img img{
   width:100%;
   height:100%;
@@ -263,3 +269,14 @@ body.modal-open {
 
 
 
+=======
+
+.ui-container {
+  display: flex;
+}
+
+#jiantou-right {
+  bottom: 2.5vw;
+  right: 9vw;
+}
+>>>>>>> main

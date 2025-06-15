@@ -64,7 +64,7 @@ body {
     position: absolute;
 }
 
-.img:nth-child(1) {
+.img:nth-child(6) {
     top: 5vw;
     left: 33vw;
 }

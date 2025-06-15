@@ -179,6 +179,8 @@ body {
 
 footer {
   width: 100vw;
+  display: flex;
+  position: relative;
 }
 
 footer img {
@@ -278,4 +280,63 @@ footer img {
   left: 65.9rem;
   top: 41.9rem;
   z-index: 3;
+}
+
+#jin {
+  position: absolute;
+  top: 10rem;
+  left: 136rem;
+
+}
+
+#n2025 {
+  position: absolute;
+  top: 20rem;
+  left: 159rem;
+}
+
+#brid {
+  position: absolute;
+  top: 67rem;
+  left: 88rem;
+}
+
+.addp {
+  position: absolute;
+  top: 75rem;
+  left: 20rem;
+}
+
+.footp1 {
+  position: absolute;
+  bottom: 0rem;
+  left: 75rem;
+}
+
+#footp2 {
+  position: absolute;
+  bottom: 10rem;
+
+}
+
+#logo {
+  position: absolute;
+  bottom: 0;
+  left: 76rem;
+  width: 4.8rem;
+  height: 4.8rem;
+
+}
+
+footer p {
+  position: absolute;
+  bottom: 0rem;
+  left: 82rem;
+}
+
+#jj2 {
+  position: absolute;
+  right: 0;
+  width: 50rem;
+  height: 28rem;
 }

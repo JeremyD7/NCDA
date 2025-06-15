@@ -14,20 +14,20 @@
 }
 
 .header__nav ul li a {
-  font-size: 2rem;
-  font-family: 'navfont', sans-serif;
+  font-size: 2.5rem;
+  font-family: 'no1', sans-serif;
 
 }
 
 .introduce a {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 0.6rem;
   line-height: 4rem;
   color: rgba(128, 128, 128, 1);
   text-align: left;
   vertical-align: top;
-  font-family: 'navfont', sans-serif;
+  font-family: 'no1', sans-serif;
 }
 
 .text {
