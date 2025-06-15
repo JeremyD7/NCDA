@@ -37,7 +37,7 @@ a {
 
 .header__nav ul {
   display: flex;
-
+  margin-top: 1rem;
   gap: 5.5rem;
 }
 

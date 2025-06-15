@@ -8,8 +8,13 @@
   src: url(../../assets/fonts/text.ttf);
 }
 
+@font-face {
+  font-family: 'no1';
+  src: url(../../assets/fonts/no1.ttf);
+}
+
 .header__nav ul li a {
-  font-size: 2rem;
-  font-family: 'navfont', sans-serif;
+  font-size: 2.5rem;
+  font-family: 'no1', sans-serif;
 
 }
