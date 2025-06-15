@@ -245,7 +245,7 @@
   position: absolute;
   border-radius: 50%;
   z-index: 440;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.8s ease;
 }
 
 .bei {

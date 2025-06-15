@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../styles/web1920-3/font.css" />
     <link rel="stylesheet" href="../styles/web1920-3/index.css" />
     <link rel="stylesheet" href="../styles/web1920-3/reset.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-
     <nav class="header">
         <div class="header__logo">
             <img src="../assets/images/logo.svg" alt="">
@@ -28,7 +28,6 @@
                     <a href="./web-1920-6.html">成品展示</a>
                 </div>
     </nav>
-
     <div class="body">
         <div class="compare-title">织机对比</div>
         <div class="compare-p"> 探索传统与现代蜀锦织机的差异与联系</div>
@@ -36,23 +35,140 @@
             <div class="compare-img" id="left">
                 <img src="../assets/images-web1920-3/left.png" alt="">
             </div>
-            <a class="compare-buttom" id="btn-left" href="">查看详情</a>
+            <!-- 指向第一个模态框 -->
+            <button class="compare-buttom" id="btn-left" data-bs-toggle="modal"
+                data-bs-target="#myModalLeft">查看详情</button>
             <div class="jiantou" id="jiantou-left">
                 <img src="../assets/images-web1920-3/jiantou.png" alt="">
             </div>
-
         </div>
         <div class="body-box-right">
             <div class="compare-img" id="right">
                 <img src="../assets/images-web1920-3/right.png" alt="">
             </div>
-            <a class="compare-buttom" id="btn-right" href="">查看详情</a>
+            <!-- 指向第二个模态框 -->
+            <button class="compare-buttom" id="btn-right" data-bs-toggle="modal"
+                data-bs-target="#myModalRight">查看详情</button>
             <div class="jiantou" id="jiantou-right">
                 <img src="../assets/images-web1920-3/jiantou.png" alt="">
             </div>
         </div>
     </div>
+    <!-- 第一个模态框 -->
+    <div class="modal fade" id="myModalLeft" tabindex="-1" aria-labelledby="exampleModalLabelLeft" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabelLeft">传统织机详情</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-img">
+                        <img src="../assets/images-web1920-3/left.png" alt="">
+                    </div>
+                    <div class="modal-bottom-container">
+                        <div class="modal-left">
+                            <div class="left-p-container">
+                                <h2>历史背景</h2>
+                                <div class="left-p-box">
+                                    传统蜀锦织机的历史可以追溯到战国时期，经过秦汉、唐宋的发展，到明清时期达到顶峰。这种织机结构复杂，通常由机身、综框、踏板、梭子等部分组成。
+
+                                    传统织机需要两名织工配合操作，一人坐在织机前投梭引纬，另一人坐在踏板处控制经线的升降。这种分工协作的方式需要长时间的训练和默契。
+
+                                    蜀锦织机的多综多蹑技术是其最大特色，通过脚踏板的不同组合，可以控制不同的经线升降，从而织出复杂的纹样。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-right">
+                            <h2>技术特点</h2>
+                            <div class="right-p-container">
+                                <ul>
+                                    <div class="ul-container">
+                                        <div class="ul-img">
+                                            <img src="../assets/images-web1920-3/yes.png" alt="">
+                                        </div>
+                                        <li>完全依靠人力操作，体现匠人精神</li>
+                                    </div>
+                                    <div class="ul-container">
+                                        <div class="ul-img">
+                                            <img src="../assets/images-web1920-3/yes.png" alt="">
+                                        </div>
+                                        <li>完全依靠人力操作，体现匠人精神</li>
+                                    </div>
+                                    <div class="ul-container">
+                                        <div class="ul-img">
+                                            <img src="../assets/images-web1920-3/yes.png" alt="">
+                                        </div>
+                                        <li>完全依靠人力操作，体现匠人精神</li>
+                                    </div>
+                                    <div class="ul-container">
+                                        <div class="ul-img">
+                                            <img src="../assets/images-web1920-3/yes.png" alt="">
+                                        </div>
+                                        <li>完全依靠人力操作，体现匠人精神</li>
+                                    </div>
+                                </ul>
+                            </div>
+                            <div class="right-p-footer">
+                                <div class="right-footer-p">
+                                    传统织机的多综多蹑技术使得织出的蜀锦作品具有较高的艺术价值，同时也为蜀锦织机的历史贡献了重要的力量。
+                                </div>
+                                <div class="footer-explain">
+                                    传统织机的多综多蹑技术使得织出的蜀锦作品具有较高的艺术价值，同时也为蜀锦织机的历史贡献了重要的力量。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 第二个模态框 -->
+    <div class="modal fade" id="myModalRight" tabindex="-1" aria-labelledby="exampleModalLabelRight" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelRight">现代织机详情</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+                </div>
+                <div class="modal-body">
+                    这里是现代织机的详情内容
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../JS/web3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        // 初始化两个模态框
+        const myModalLeft = new bootstrap.Modal(document.getElementById('myModalLeft'));
+        const myModalRight = new bootstrap.Modal(document.getElementById('myModalRight'));
+
+        // 为左边按钮绑定点击事件
+        document.getElementById('btn-left').addEventListener('click', function () {
+            myModalLeft.show();
+        });
+
+        // 为右边按钮绑定点击事件
+        document.getElementById('btn-right').addEventListener('click', function () {
+            myModalRight.show();
+        });
+
+        // 为关闭按钮绑定点击事件
+        document.querySelectorAll('[data-bs-dismiss="modal"]').forEach(button => {
+            button.addEventListener('click', function () {
+                // 隐藏对应的模态框
+                const modalId = this.closest('.modal').id;
+                if (modalId === 'myModalLeft') {
+                    myModalLeft.hide();
+                } else if (modalId === 'myModalRight') {
+                    myModalRight.hide();
+                }
+            });
+        });
+    </script>
 </body>
-<script src="../JS/web3.js"></script>
 
 </html>
