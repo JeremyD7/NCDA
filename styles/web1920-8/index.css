@@ -39,7 +39,7 @@ nav {
 
 .content {
   width: 100vw;
-  height: 405vh;
+  height: auto;
   background-image: url(../../assets/images/bg.svg);
   background-repeat: repeat;
   background-position: center;
