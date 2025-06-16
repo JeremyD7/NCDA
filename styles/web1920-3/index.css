@@ -149,6 +149,106 @@ a {
   object-fit: cover;
 }
 
+.head {
+  width: 55rem;
+  height: 10rem;
+  position: absolute;
+  top: 35rem;
+  left: 2rem;
+
+}
+
+.head img {
+  position: absolute;
+  top: 2.8rem;
+  left: 40.5rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.left {
+  position: absolute;
+  top: 2rem;
+}
+
+.right {
+  position: absolute;
+  top: 2rem;
+  left: 43rem;
+}
+
+.name {
+  position: absolute;
+  top: 7rem;
+  left: 0rem;
+
+}
+
+.content {
+  width: 31rem;
+  height: 10rem;
+  position: absolute;
+  top: 55rem;
+  left: 2rem;
+  display: flex;
+}
+
+.content h3 {
+  position: absolute;
+  top: -4rem;
+}
+
+.content ul {
+  position: absolute;
+  top: 0rem;
+  left: 5rem;
+  width: 60rem;
+}
+
+.content img {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+
+}
+
+.content #n1 {
+  position: absolute;
+  top: 1.3rem;
+  left: 4.8rem;
+}
+
+.content #n2 {
+  position: absolute;
+  top: 6rem;
+  left: 4.8rem;
+}
+
+.content #n3 {
+  position: absolute;
+  top: 10.3rem;
+  left: 4.8rem;
+}
+
+.content #n4 {
+  position: absolute;
+  top: 15.1rem;
+  left: 4.8rem;
+}
+
+.compare-img p {
+  position: absolute;
+  top: 25rem;
+  left: 3rem;
+}
+
+.compare-img .two {
+  position: absolute;
+  top: 29rem;
+  left: 3rem;
+}
+
+
 .compare-buttom {
   width: 23vw;
   height: 3vw;
