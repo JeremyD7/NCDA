@@ -29,3 +29,49 @@
   vertical-align: top;
   font-family: 'no1', sans-serif;
 }
+
+.head p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3.475rem;
+  color: rgba(107, 74, 44, 1);
+}
+
+.head .name {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3.475rem;
+  color: rgb(13, 13, 13);
+}
+
+.content h3 {
+  color: rgba(74, 51, 29, 1);
+  font-weight: 700;
+}
+
+.content ul li {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 4.5rem;
+  color: rgba(0, 0, 0, 1);
+  text-align: left;
+  vertical-align: top;
+}
+
+.compare-img p {
+  font-size: 2.6rem;
+  font-weight: 400;
+  line-height: 5.213rem;
+  color: rgba(255, 255, 255, 1);
+  text-align: left;
+  vertical-align: top;
+}
+
+.compare-img .two {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 5.213rem;
+  color: rgba(255, 255, 255, 1);
+  text-align: left;
+  vertical-align: top;
+}
