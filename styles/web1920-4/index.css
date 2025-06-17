@@ -52,7 +52,7 @@
 
 body {
     background-size: cover;
-    background-image: url(../../assets/images-web-1920-4/beijing.png);
+    background-image: url(../../assets/images-web-1920-4/demo.png);
     position: relative;
 }
 
@@ -61,35 +61,7 @@ body {
 .img {
     width: 14vw;
     height: 21vw;
-    position: absolute;
-}
 
-.img:nth-child(6) {
-    top: 5vw;
-    left: 33vw;
-}
-
-.img:nth-child(2) {
-    top: 5vw;
-    right: 32vw;
-
-}
-
-.img:nth-child(3) {
-    top: 29vw;
-    left: 23vw;
-}
-
-.img:nth-child(4) {
-
-    top: 29vw;
-    right: 42vw;
-}
-
-.img:nth-child(5) {
-
-    top: 29vw;
-    right: 21vw;
 }
 
 .img img {
@@ -104,21 +76,25 @@ body {
     font-size: 0.9vw;
     text-align: center;
 }
+
 #pt2 {
     margin-top: 2vw;
     font-size: 0.9vw;
     text-align: center;
 }
+
 #pt3 {
-    margin-top: 2vw;
+    margin-top: 2.6vw;
     font-size: 0.9vw;
     text-align: center;
 }
+
 #pt4 {
     margin-top: 2vw;
     font-size: 0.9vw;
     text-align: center;
 }
+
 #pt5 {
     margin-top: 2vw;
     font-size: 0.9vw;
@@ -128,7 +104,7 @@ body {
 
 
 
-#text{
+#text {
     text-align: center;
 }
 
@@ -157,9 +133,44 @@ body {
     display: none;
 }
 
-.box{
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgba(154, 98, 5, 1) !important;
+    font-weight: 400 !important;
+    font-size: 1.2vw !important;
+    font-family: 'no1';
+    margin-top: 0.8vw;
+}
 
+@font-face {
+    font-family: 'no1';
+    src: url('../../assets/fonts/text.ttf');
+
+
+}
+
+.body-center-container {
+    margin-top: 13vw;
+    display: flex;
+   
+    justify-content: space-between;
+  
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+}
+.img-p{
+    margin-top: 2.5vw !important;
+}
+.si{
+    width: 12vw;
+    height: 6vw;
+    position: absolute;
+    top:7vw;
+    left:10vw;
+}
+#fix{
+    position: relative;
 }
