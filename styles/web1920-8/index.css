@@ -8,11 +8,10 @@ body {
 
 nav {
   position: relative;
-  background-image: url(../../assets/images/nav.svg );
+  background-image: url(../../assets/images/indexnav.webp );
   background-repeat: no-repeat;
   background-size: cover;
-  height: 5vh;
-
+  height: 6vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,7 +61,7 @@ nav {
 .person {
   width: 100%;
   height: 138rem;
-  background-image: url(../../assets/images-web-1920-8/main1bg.webp);
+  /* background-image: url(../../assets/images-web-1920-8/main1bg.webp); */
 }
 
 .person1 {
