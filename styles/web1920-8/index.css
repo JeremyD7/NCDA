@@ -371,3 +371,31 @@ footer {
 .foot2 img {
   width: 100%;
 }
+
+#footp2 {
+  position: absolute;
+  bottom: 10rem;
+
+}
+
+#logo {
+  position: absolute;
+  bottom: 1vh;
+  left: 76rem;
+  width: 4.8rem;
+  height: 4.8rem;
+
+}
+
+.foot2 p {
+  position: absolute;
+  top: 2vh;
+  right: 48vw;
+
+}
+
+.foot1 p {
+  position: absolute;
+  top: 5vh;
+  left: 45vw;
+}
