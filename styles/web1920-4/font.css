@@ -4,18 +4,13 @@
 }
 
 @font-face {
-  font-family: 'navfont';
-  src: url('../../assets/fonts/navfont.ttf');
-}
-
-@font-face {
   font-family: 'text';
   src: url('../../assets/fonts/text.ttf');
 }
 
 .header__nav ul li a {
   font-size: 2.5rem;
-  font-family: 'no1', sans-serif;
+  font-family: 'no1';
 
 }
 
@@ -27,5 +22,5 @@
   color: rgba(128, 128, 128, 1);
   text-align: left;
   vertical-align: top;
-  font-family: 'no1', sans-serif;
+  font-family: 'no1';
 }
