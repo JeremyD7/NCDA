@@ -113,6 +113,16 @@
   font-weight: 400;
   font-size: 1.1vw;
   font-family: "text";
+  color: rgba(255, 255, 255, 1);
+}
+.explain-container h1{
+  font-family: 'navfont';
+   position: absolute;
+  top: 1vw;
+  right: 14vw;
+  letter-spacing: 3vw;
+  color: rgba(255, 255, 255, 1);
+  font-size: 4vw;
 }
 
 .context-container {
@@ -208,28 +218,28 @@
 }
 
 #people1 {
-  top: 31vw;
+  top: 1vw;
   left: 19vw;
 
   background-size: cover;
 }
 
 #people2 {
-  top: 31vw;
+  top: 1vw;
   left: 47vw;
 
   background-size: cover;
 }
 
 #people3 {
-  top: 52vw;
+  top: 22vw;
   left: 33vw;
 
   background-size: cover;
 }
 
 #people4 {
-  top: 52vw;
+  top: 22vw;
   left: 62vw;
 
   background-size: cover;
@@ -295,7 +305,7 @@
   border-radius: 50%;
   z-index: 440;
   background: rgba(214, 214, 214, 1);
-  top: 31vw;
+ top: 1vw;
   left: 19vw;
   background-image: url(../../assets/images-web1920-2/zhan.png);
   background-position: center;
@@ -308,7 +318,7 @@
   border-radius: 50%;
   z-index: 440;
   background: rgba(227, 203, 176, 1);
-  top: 31vw;
+  top: 1vw;
   left: 47vw;
   background-position: center;
   background-size: cover;
@@ -321,7 +331,7 @@
   border-radius: 50%;
   z-index: 440;
   background: rgba(197, 217, 201, 1);
-  top: 52vw;
+  top: 22vw;
   left: 33vw;
   background-position: center;
   background-size: cover;
@@ -335,7 +345,7 @@
   border-radius: 50%;
   z-index: 440;
   background: rgba(197, 222, 217, 1);
-  top: 52vw;
+  top: 22vw;
   left: 62vw;
   background-position: center;
   background-size: cover;
@@ -431,3 +441,26 @@
         transform: translateY(0);
     }
 }
+.demo-rbq{
+  width:100%;
+  height:28vw;
+  background-image: url(../../assets/images-web1920-2/111.png);
+  background-size: contain;
+  z-index: 1000;
+  position: relative;
+}
+@font-face {
+  font-family: 'no1';
+  src: url('../../assets/fonts/no1.ttf');
+}
+
+@font-face {
+  font-family: 'navfont';
+  src: url('../../assets/fonts/navfont.ttf');
+}
+
+@font-face {
+  font-family: 'text';
+  src: url('../../assets/fonts/text.ttf');
+}
+
