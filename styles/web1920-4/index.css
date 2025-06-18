@@ -1,8 +1,8 @@
 .header {
-    background-image: url(../../assets/images/nav.svg );
+    background-image: url(../../assets/images/indexnav.webp );
     background-repeat: no-repeat;
     background-size: cover;
-    height: 5vh;
+    height: 6vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -154,23 +154,26 @@ body {
 .body-center-container {
     margin-top: 13vw;
     display: flex;
-   
+
     justify-content: space-between;
-  
+
     padding-left: 5vw;
     padding-right: 5vw;
 
 }
-.img-p{
+
+.img-p {
     margin-top: 2.5vw !important;
 }
-.si{
+
+.si {
     width: 12vw;
     height: 6vw;
     position: absolute;
-    top:7vw;
-    left:10vw;
+    top: 7vw;
+    left: 10vw;
 }
-#fix{
+
+#fix {
     position: relative;
 }
