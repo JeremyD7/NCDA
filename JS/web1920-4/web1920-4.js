@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!imgContainer) return; 
             const pE = imgContainer.querySelector('.img-p');
             this.style.display = 'none';
-            this.parentElement.style.border = '5px solid rgba(0,0,0,1)';
+            this.parentElement.style.border = '5px solid rgba(175, 114, 9, 1)';
             this.parentElement.style.borderRadius = '199px';
 
             if (pE) {

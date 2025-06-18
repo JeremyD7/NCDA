@@ -100,6 +100,21 @@ body {
     font-size: 0.9vw;
     text-align: center;
 }
+@font-face {
+  font-family: 'no1';
+  src: url('../../assets/fonts/no1.ttf');
+}
+
+@font-face {
+  font-family: 'navfont';
+  src: url('../../assets/fonts/navfont.ttf');
+}
+
+@font-face {
+  font-family: 'text';
+  src: url('../../assets/fonts/text.ttf');
+}
+
 
 
 
@@ -113,8 +128,9 @@ body {
     height: 21vw;
     padding: 0;
     margin: 0;
-    /* border:5px solid rgba(0,0,0,1);
-    border-radius: 198px; */
+    border:6px solid rgba(175, 114, 9, 1);
+
+    border-radius: 201px;
 }
 
 /* .temp:hover{
@@ -140,15 +156,8 @@ body {
     color: rgba(154, 98, 5, 1) !important;
     font-weight: 400 !important;
     font-size: 1.2vw !important;
-    font-family: 'no1';
+    font-family: 'navfont';
     margin-top: 0.8vw;
-}
-
-@font-face {
-    font-family: 'no1';
-    src: url('../../assets/fonts/text.ttf');
-
-
 }
 
 .body-center-container {
@@ -176,4 +185,18 @@ body {
 
 #fix {
     position: relative;
+}
+@font-face {
+  font-family: 'no1';
+  src: url('../../assets/fonts/no1.ttf');
+}
+
+@font-face {
+  font-family: 'navfont';
+  src: url('../../assets/fonts/navfont.ttf');
+}
+
+@font-face {
+  font-family: 'text';
+  src: url('../../assets/fonts/text.ttf');
 }
