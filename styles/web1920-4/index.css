@@ -160,6 +160,13 @@ body {
     margin-top: 0.8vw;
 }
 
+@font-face {
+    font-family: 'no1';
+    src: url('../../assets/fonts/no1.ttf');
+
+
+}
+
 .body-center-container {
     margin-top: 13vw;
     display: flex;
