@@ -3,153 +3,233 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🌦️ 随机天气小工具</title>
+    <title>🎮 猜数字小游戏</title>
     <style>
-      :root {
-        --bg: #1a1a2e;
-        --card-bg: #16213e;
-        --text: #eee;
-        --accent: #e94560;
-      }
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
-        font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
-        background: var(--bg);
-        color: var(--text);
+        font-family: 'Courier New', Courier, monospace;
+        background: #0f0f23;
+        color: #ff6ec7;
         min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
       }
-      .widget {
-        background: var(--card-bg);
-        border-radius: 24px;
-        padding: 36px 48px;
+      .game-box {
+        background: #1a1a3e;
+        border: 2px solid #ff6ec7;
+        border-radius: 20px;
+        padding: 48px 40px;
         text-align: center;
-        box-shadow: 0 15px 50px rgba(0,0,0,0.5);
-        min-width: 320px;
+        max-width: 440px;
+        width: 90%;
+        box-shadow: 0 0 40px rgba(255, 110, 199, 0.15);
       }
-      .widget .city {
-        font-size: 1.4rem;
-        color: #aaa;
+      .game-box h1 {
+        font-size: 2rem;
         margin-bottom: 6px;
+        text-shadow: 0 0 10px rgba(255, 110, 199, 0.6);
       }
-      .widget .temp {
-        font-size: 5rem;
-        font-weight: 800;
-        background: linear-gradient(180deg, #fff 30%, #e94560);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+      .subtitle {
+        color: #7a7acc;
+        font-size: 0.9rem;
+        margin-bottom: 28px;
       }
-      .widget .desc {
+      .hint {
+        background: #0f0f23;
+        border: 1px dashed #ff6ec7;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 20px;
         font-size: 1.2rem;
-        color: #ccc;
-        margin: 8px 0 20px;
-      }
-      .details {
+        min-height: 56px;
         display: flex;
-        justify-content: space-around;
-        margin: 24px 0;
-        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
       }
-      .details .item span {
-        display: block;
-        font-size: 0.85rem;
-        color: #888;
-        margin-top: 4px;
+      .hint.success {
+        border-color: #00e676;
+        color: #00e676;
+        background: #0a2a1a;
+        box-shadow: 0 0 30px rgba(0, 230, 118, 0.2);
       }
-      .details .item strong { font-size: 1.3rem; }
-      .refresh-btn {
-        background: var(--accent);
+      .hint.fail {
+        border-color: #ff1744;
+        color: #ff1744;
+      }
+      .guesses {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 20px;
+        min-height: 32px;
+      }
+      .guesses span {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 0.95rem;
+      }
+      .guesses .too-high { background: #ff174422; color: #ff1744; border: 1px solid #ff1744; }
+      .guesses .too-low  { background: #2979ff22; color: #2979ff; border: 1px solid #2979ff; }
+      .guesses .correct  { background: #00e67622; color: #00e676; border: 1px solid #00e676; }
+      .input-row {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+      .input-row input {
+        flex: 1;
+        padding: 12px 16px;
+        border: 2px solid #ff6ec7;
+        border-radius: 30px;
+        background: #0f0f23;
         color: #fff;
+        font-size: 1.1rem;
+        text-align: center;
+        font-family: inherit;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+      .input-row input:focus { border-color: #ff9de0; }
+      .input-row button {
+        padding: 12px 28px;
         border: none;
-        padding: 10px 28px;
-        border-radius: 50px;
+        border-radius: 30px;
+        background: #ff6ec7;
+        color: #0f0f23;
+        font-weight: bold;
         font-size: 1rem;
         cursor: pointer;
-        transition: all 0.3s ease;
-        margin-top: 8px;
+        font-family: inherit;
+        transition: all 0.2s ease;
       }
-      .refresh-btn:hover {
-        background: #ff6b81;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(233, 69, 96, 0.4);
+      .input-row button:hover {
+        background: #ff9de0;
+        transform: scale(1.04);
       }
-      .loading { opacity: 0.5; pointer-events: none; }
+      .new-game-btn {
+        background: transparent;
+        border: 2px solid #7a7acc;
+        color: #7a7acc;
+        padding: 10px 24px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        font-family: inherit;
+        transition: all 0.2s ease;
+      }
+      .new-game-btn:hover {
+        background: #7a7acc22;
+        border-color: #ff6ec7;
+        color: #ff6ec7;
+      }
+      .stats {
+        color: #7a7acc;
+        font-size: 0.85rem;
+        margin-top: 16px;
+      }
     </style>
   </head>
   <body>
-    <div class="widget" id="weatherWidget">
-      <div class="city" id="city">📍 北京</div>
-      <div class="temp" id="temp">26°</div>
-      <div class="desc" id="desc">⛅ 多云</div>
-      <div class="details">
-        <div class="item">
-          <strong id="humidity">65%</strong>
-          <span>💧 湿度</span>
-        </div>
-        <div class="item">
-          <strong id="wind">12 km/h</strong>
-          <span>🌬️ 风速</span>
-        </div>
-        <div class="item">
-          <strong id="uv">4</strong>
-          <span>☀️ 紫外线</span>
-        </div>
+    <div class="game-box">
+      <h1>🎮 猜数字</h1>
+      <p class="subtitle">请输入 1 ~ 100 之间的数字</p>
+      <div class="hint" id="hint">🤔 让我们开始吧！</div>
+      <div class="guesses" id="guesses"></div>
+      <div class="input-row">
+        <input type="number" id="guessInput" min="1" max="100" placeholder="1-100" />
+        <button id="submitBtn">🎯 猜测</button>
       </div>
-      <button class="refresh-btn" id="refreshBtn">🔄 刷新天气</button>
+      <button class="new-game-btn" id="newGameBtn">🔄 新游戏</button>
+      <div class="stats" id="stats"></div>
     </div>
 
     <script>
       (function () {
-        const cities = ['北京', '上海', '广州', '深圳', '成都', '杭州', '武汉', '南京'];
-        const weathers = [
-          { desc: '☀️ 晴朗', icon: '☀️' },
-          { desc: '⛅ 多云', icon: '⛅' },
-          { desc: '🌧️ 小雨', icon: '🌧️' },
-          { desc: '⛈️ 雷阵雨', icon: '⛈️' },
-          { desc: '🌫️ 雾霾', icon: '🌫️' },
-          { desc: '❄️ 小雪', icon: '❄️' },
-        ];
+        const hintEl = document.getElementById('hint');
+        const guessesEl = document.getElementById('guesses');
+        const inputEl = document.getElementById('guessInput');
+        const submitBtn = document.getElementById('submitBtn');
+        const newGameBtn = document.getElementById('newGameBtn');
+        const statsEl = document.getElementById('stats');
 
-        function rand(min, max) {
-          return Math.floor(Math.random() * (max - min + 1)) + min;
+        let target = 0;
+        let attempts = 0;
+        let history = [];
+        let gameOver = false;
+
+        function newGame() {
+          target = Math.floor(Math.random() * 100) + 1;
+          attempts = 0;
+          history = [];
+          gameOver = false;
+          hintEl.textContent = '🤔 让我们开始吧！';
+          hintEl.className = 'hint';
+          guessesEl.innerHTML = '';
+          inputEl.value = '';
+          inputEl.disabled = false;
+          submitBtn.disabled = false;
+          statsEl.textContent = '';
+          inputEl.focus();
+          console.log('%c🎮 新游戏开始！目标数字已生成（嘘~ 是 ' + target + '）', 'color:#ff6ec7;');
         }
 
-        function pick(arr) {
-          return arr[Math.floor(Math.random() * arr.length)];
+        function renderHistory() {
+          guessesEl.innerHTML = history
+            .map((g) => {
+              let cls = '';
+              if (g === target) cls = 'correct';
+              else if (g > target) cls = 'too-high';
+              else cls = 'too-low';
+              return '<span class="' + cls + '">' + g + '</span>';
+            })
+            .join('');
         }
 
-        function refreshWeather() {
-          const widget = document.getElementById('weatherWidget');
-          widget.classList.add('loading');
+        function makeGuess() {
+          if (gameOver) return;
+          const val = parseInt(inputEl.value, 10);
+          if (isNaN(val) || val < 1 || val > 100) {
+            hintEl.textContent = '⚠️ 请输入 1 到 100 之间的整数！';
+            hintEl.className = 'hint fail';
+            inputEl.value = '';
+            return;
+          }
+          attempts++;
+          history.push(val);
+          renderHistory();
 
-          // 模拟网络延迟
-          setTimeout(() => {
-            const w = pick(weathers);
-            const temp = rand(10, 40);
-            document.getElementById('city').textContent = '📍 ' + pick(cities);
-            document.getElementById('temp').textContent = temp + '°';
-            document.getElementById('desc').textContent = w.desc;
-            document.getElementById('humidity').textContent = rand(30, 95) + '%';
-            document.getElementById('wind').textContent = rand(3, 35) + ' km/h';
-            document.getElementById('uv').textContent = rand(1, 11);
-            widget.classList.remove('loading');
-
-            console.log(
-              '%c🌦️ 天气已更新 %c| %c' +
-                document.getElementById('city').textContent +
-                ' %c' + temp + '° ' + w.desc,
-              'font-size:14px;', '', 'color:#e94560;', 'color:#fff;'
-            );
-          }, 600);
+          if (val === target) {
+            hintEl.textContent = '🎉 恭喜！你猜对了！答案就是 ' + target + '！';
+            hintEl.className = 'hint success';
+            gameOver = true;
+            inputEl.disabled = true;
+            submitBtn.disabled = true;
+            statsEl.textContent = '🏆 你一共用了 ' + attempts + ' 次猜测';
+          } else if (val > target) {
+            hintEl.textContent = '📉 太大了，再小一点！';
+            hintEl.className = 'hint fail';
+          } else {
+            hintEl.textContent = '📈 太小了，再大一点！';
+            hintEl.className = 'hint fail';
+          }
+          inputEl.value = '';
+          inputEl.focus();
         }
 
-        document.getElementById('refreshBtn').addEventListener('click', refreshWeather);
+        submitBtn.addEventListener('click', makeGuess);
+        inputEl.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter') makeGuess();
+        });
+        newGameBtn.addEventListener('click', newGame);
 
-        // 页面加载时记录
-        console.log('%c🌦️ 随机天气小工具已就绪', 'color:#e94560;font-size:14px;');
+        newGame();
       })();
     </script>
   </body>
