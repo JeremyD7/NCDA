@@ -1,81 +1,155 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NCDA Demo</title>
+    <title>🌦️ 随机天气小工具</title>
     <style>
+      :root {
+        --bg: #1a1a2e;
+        --card-bg: #16213e;
+        --text: #eee;
+        --accent: #e94560;
+      }
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        background: var(--bg);
+        color: var(--text);
         min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
       }
-      .card {
-        background: white;
-        border-radius: 16px;
-        padding: 40px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      .widget {
+        background: var(--card-bg);
+        border-radius: 24px;
+        padding: 36px 48px;
         text-align: center;
-        max-width: 400px;
-        width: 90%;
-        transition: transform 0.3s ease;
+        box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+        min-width: 320px;
       }
-      .card:hover { transform: translateY(-5px); }
-      .card h1 {
-        color: #333;
-        font-size: 2rem;
-        margin-bottom: 12px;
+      .widget .city {
+        font-size: 1.4rem;
+        color: #aaa;
+        margin-bottom: 6px;
       }
-      .card p { color: #666; margin-bottom: 24px; line-height: 1.6; }
-      .btn {
-        display: inline-block;
-        padding: 12px 32px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
+      .widget .temp {
+        font-size: 5rem;
+        font-weight: 800;
+        background: linear-gradient(180deg, #fff 30%, #e94560);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .widget .desc {
+        font-size: 1.2rem;
+        color: #ccc;
+        margin: 8px 0 20px;
+      }
+      .details {
+        display: flex;
+        justify-content: space-around;
+        margin: 24px 0;
+        gap: 20px;
+      }
+      .details .item span {
+        display: block;
+        font-size: 0.85rem;
+        color: #888;
+        margin-top: 4px;
+      }
+      .details .item strong { font-size: 1.3rem; }
+      .refresh-btn {
+        background: var(--accent);
+        color: #fff;
         border: none;
-        border-radius: 30px;
+        padding: 10px 28px;
+        border-radius: 50px;
         font-size: 1rem;
         cursor: pointer;
-        transition: opacity 0.3s ease, transform 0.2s ease;
+        transition: all 0.3s ease;
+        margin-top: 8px;
       }
-      .btn:hover { opacity: 0.9; transform: scale(1.05); }
-      .counter {
-        font-size: 3rem;
-        font-weight: bold;
-        color: #764ba2;
-        margin: 16px 0;
+      .refresh-btn:hover {
+        background: #ff6b81;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(233, 69, 96, 0.4);
       }
+      .loading { opacity: 0.5; pointer-events: none; }
     </style>
   </head>
   <body>
-    <div class="card">
-      <h1>🎨 NCDA Demo</h1>
-      <p>点击按钮增加计数，来试试看吧！</p>
-      <div class="counter" id="counter">0</div>
-      <button class="btn" id="clickBtn">点我 +1</button>
+    <div class="widget" id="weatherWidget">
+      <div class="city" id="city">📍 北京</div>
+      <div class="temp" id="temp">26°</div>
+      <div class="desc" id="desc">⛅ 多云</div>
+      <div class="details">
+        <div class="item">
+          <strong id="humidity">65%</strong>
+          <span>💧 湿度</span>
+        </div>
+        <div class="item">
+          <strong id="wind">12 km/h</strong>
+          <span>🌬️ 风速</span>
+        </div>
+        <div class="item">
+          <strong id="uv">4</strong>
+          <span>☀️ 紫外线</span>
+        </div>
+      </div>
+      <button class="refresh-btn" id="refreshBtn">🔄 刷新天气</button>
     </div>
 
     <script>
       (function () {
-        const counterEl = document.getElementById('counter');
-        const btnEl = document.getElementById('clickBtn');
-        let count = 0;
+        const cities = ['北京', '上海', '广州', '深圳', '成都', '杭州', '武汉', '南京'];
+        const weathers = [
+          { desc: '☀️ 晴朗', icon: '☀️' },
+          { desc: '⛅ 多云', icon: '⛅' },
+          { desc: '🌧️ 小雨', icon: '🌧️' },
+          { desc: '⛈️ 雷阵雨', icon: '⛈️' },
+          { desc: '🌫️ 雾霾', icon: '🌫️' },
+          { desc: '❄️ 小雪', icon: '❄️' },
+        ];
 
-        btnEl.addEventListener('click', () => {
-          count += 1;
-          counterEl.textContent = count;
+        function rand(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
 
-          // 当计数达到特定值时给点彩蛋
-          if (count % 10 === 0) {
-            counterEl.style.color = count % 20 === 0 ? '#764ba2' : '#e74c3c';
-          }
-        });
+        function pick(arr) {
+          return arr[Math.floor(Math.random() * arr.length)];
+        }
 
-        console.log('🎉 NCDA Demo 页面已加载！');
+        function refreshWeather() {
+          const widget = document.getElementById('weatherWidget');
+          widget.classList.add('loading');
+
+          // 模拟网络延迟
+          setTimeout(() => {
+            const w = pick(weathers);
+            const temp = rand(10, 40);
+            document.getElementById('city').textContent = '📍 ' + pick(cities);
+            document.getElementById('temp').textContent = temp + '°';
+            document.getElementById('desc').textContent = w.desc;
+            document.getElementById('humidity').textContent = rand(30, 95) + '%';
+            document.getElementById('wind').textContent = rand(3, 35) + ' km/h';
+            document.getElementById('uv').textContent = rand(1, 11);
+            widget.classList.remove('loading');
+
+            console.log(
+              '%c🌦️ 天气已更新 %c| %c' +
+                document.getElementById('city').textContent +
+                ' %c' + temp + '° ' + w.desc,
+              'font-size:14px;', '', 'color:#e94560;', 'color:#fff;'
+            );
+          }, 600);
+        }
+
+        document.getElementById('refreshBtn').addEventListener('click', refreshWeather);
+
+        // 页面加载时记录
+        console.log('%c🌦️ 随机天气小工具已就绪', 'color:#e94560;font-size:14px;');
       })();
     </script>
   </body>
