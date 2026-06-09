@@ -90,7 +90,10 @@
         <span class="color-dot" style="background:#00b894" data-color="#00b894"></span>
         <span class="color-dot" style="background:#d63031" data-color="#d63031"></span>
       </div>
-      <button class="btn" id="nextBtn">🔄 换一条名言</button>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <button class="btn" id="nextBtn">🔄 换一条名言</button>
+        <button class="btn" id="copyBtn" style="background:#636e72;">📋 复制</button>
+      </div>
     </div>
 
     <script>
@@ -125,6 +128,16 @@
         }
 
         nextBtn.addEventListener('click', pickQuote);
+
+        // 一键复制名言
+        document.getElementById('copyBtn').addEventListener('click', () => {
+          const text = quoteEl.textContent + ' ' + authorEl.textContent;
+          navigator.clipboard.writeText(text).then(() => {
+            const btn = document.getElementById('copyBtn');
+            btn.textContent = '✅ 已复制';
+            setTimeout(() => { btn.textContent = '📋 复制'; }, 1500);
+          });
+        });
 
         document.querySelectorAll('.color-dot').forEach(function (dot) {
           dot.addEventListener('click', function () {
