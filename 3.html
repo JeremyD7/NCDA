@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎋 每日运势签</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        font-family: 'STKaiti', 'KaiTi', '楷体', 'Microsoft YaHei', serif;
+        background: linear-gradient(180deg, #2c1810 0%, #4a2c17 40%, #2c1810 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        user-select: none;
+      }
+      .shrine {
+        text-align: center;
+      }
+      .shrine-icon { font-size: 5rem; margin-bottom: 8px; }
+      .shrine-title {
+        color: #d4a574;
+        font-size: 1.8rem;
+        letter-spacing: 8px;
+        margin-bottom: 4px;
+      }
+      .shrine-sub {
+        color: #8b7355;
+        font-size: 0.85rem;
+        margin-bottom: 30px;
+      }
+      .tube {
+        position: relative;
+        width: 100px;
+        height: 260px;
+        background: linear-gradient(180deg, #c0392b, #8b1a1a);
+        border-radius: 20px 20px 50% 50%;
+        margin: 0 auto 20px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.6), inset 0 2px 8px rgba(255,255,255,0.15);
+        cursor: pointer;
+        transition: transform 0.15s;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 16px;
+        overflow: hidden;
+      }
+      .tube:hover { transform: translateY(-4px); }
+      .tube:active, .tube.shake { animation: shake 0.2s ease; }
+      @keyframes shake {
+        0%,100% { transform: rotate(0); }
+        25% { transform: rotate(-6deg); }
+        75% { transform: rotate(6deg); }
+      }
+      .sticks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+      }
+      .stick-tip {
+        width: 8px;
+        height: 22px;
+        background: linear-gradient(180deg, #f5deb3, #deb887);
+        border-radius: 0 0 4px 4px;
+        margin-bottom: -1px;
+      }
+      .result-card {
+        background: linear-gradient(180deg, #fef5e7, #fdebd0);
+        border-radius: 12px;
+        padding: 32px 28px;
+        max-width: 360px;
+        width: 90%;
+        text-align: center;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+        margin-top: 16px;
+        animation: cardIn 0.5s ease;
+        border: 2px solid #d4a574;
+        position: relative;
+      }
+      .result-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 16px; right: 16px;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #c0392b, transparent);
+      }
+      @keyframes cardIn {
+        0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+        100% { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .level-badge {
+        display: inline-block;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        padding: 4px 18px;
+        border-radius: 50px;
+        letter-spacing: 2px;
+        color: #fff;
+      }
+      .level-大吉 { background: #e74c3c; }
+      .level-中吉 { background: #e67e22; }
+      .level-小吉 { background: #f39c12; }
+      .level-吉 { background: #2ecc71; }
+      .level-末吉 { background: #3498db; }
+      .level-凶 { background: #7f8c8d; }
+      .fortune-text {
+        font-size: 1.15rem;
+        color: #3e2723;
+        line-height: 1.9;
+        margin-bottom: 14px;
+      }
+      .fortune-tip {
+        font-size: 0.85rem;
+        color: #8d6e63;
+        margin-top: 8px;
+        padding-top: 12px;
+        border-top: 1px dashed #d7ccc8;
+      }
+      .reset-hint {
+        color: #6b5b4f;
+        font-size: 0.8rem;
+        margin-top: 20px;
+        opacity: 0.7;
+      }
+      .hidden { display: none; }
+    </style>
+  </head>
+  <body>
+    <div class="shrine">
+      <div class="shrine-icon">⛩️</div>
+      <div class="shrine-title">观音灵签</div>
+      <div class="shrine-sub">心诚则灵 · 每日一签</div>
+      <div class="tube" id="tube">
+        <div class="sticks">
+          <div class="stick-tip"></div>
+          <div class="stick-tip"></div>
+          <div class="stick-tip"></div>
+          <div class="stick-tip"></div>
+          <div class="stick-tip"></div>
+          <div class="stick-tip"></div>
+          <div class="stick-tip"></div>
+        </div>
+      </div>
+      <p style="color:#a08060;font-size:0.9rem;">👆 点签筒抽签</p>
+    </div>
+
+    <div class="result-card hidden" id="resultCard"></div>
+
+    <script>
+      (function () {
+        const fortunes = [
+          { level: '大吉', text: '紫气东来，万事亨通。所求皆遂，否极泰来。', tip: '今日宜：大胆行动、表白心意、买彩票', emoji: '🌟' },
+          { level: '大吉', text: '瑞气盈门，福星高照。贵人相助，步步高升。', tip: '今日宜：出门社交、谈判签约、投资理财', emoji: '🎉' },
+          { level: '中吉', text: '云开见月，顺水行舟。虽有波折，终得善果。', tip: '今日宜：耐心等待、整理规划、联系旧友', emoji: '🌤️' },
+          { level: '中吉', text: '春风吹绿，枯木逢春。时来运转，当机立断。', tip: '今日宜：抓住机会、学习新技能、运动健身', emoji: '🌱' },
+          { level: '中吉', text: '明月当空，前途光明。心存善念，自有福报。', tip: '今日宜：帮助他人、读书思考、早睡早起', emoji: '🌕' },
+          { level: '小吉', text: '微风拂面，小事如意。脚踏实地，莫贪大功。', tip: '今日宜：完成琐事、打扫房间、做顿好饭', emoji: '🍃' },
+          { level: '小吉', text: '蜻蜓点水，浅尝辄止。不宜冒进，守成为上。', tip: '今日宜：保守行事、确认细节、保持低调', emoji: '🪷' },
+          { level: '吉', text: '平平稳稳，无惊无喜。安分守己，自得其乐。', tip: '今日宜：按部就班、喝茶发呆、撸猫逗狗', emoji: '🍵' },
+          { level: '吉', text: '风和日丽，岁月静好。平凡一日，亦有滋味。', tip: '今日宜：享受当下、散步发呆、给家人打电话', emoji: '☀️' },
+          { level: '末吉', text: '雾里看花，朦胧不清。三思而行，莫急莫躁。', tip: '今日宜：谨慎决策、多做调研、早点回家', emoji: '🌫️' },
+          { level: '末吉', text: '逆水行舟，不进则退。咬牙坚持，终会好转。', tip: '今日宜：坚持到底、少说多做、喝杯热茶', emoji: '🚣' },
+          { level: '凶', text: '风雨交加，路难行也。忍一时气，免百日忧。', tip: '今日宜：避免争吵、不要冲动消费、早点睡', emoji: '🌧️' },
+          { level: '凶', text: '乌云蔽日，诸事不宜。静坐常思，以退为进。', tip: '今日宜：低调做人、推掉应酬、宅家休息', emoji: '⛈️' },
+        ];
+
+        const tube = document.getElementById('tube');
+        const resultCard = document.getElementById('resultCard');
+
+        // 检查今天是不是已经抽过了
+        const today = new Date().toDateString();
+        const saved = JSON.parse(localStorage.getItem('dailyFortune') || '{}');
+
+        function showResult(fortune) {
+          resultCard.innerHTML = `
+            <div class="level-badge level-${fortune.level}">${fortune.emoji} ${fortune.level}</div>
+            <div class="fortune-text">${fortune.text}</div>
+            <div class="fortune-tip">${fortune.tip}</div>
+          `;
+          resultCard.classList.remove('hidden');
+          resultCard.style.animation = 'none';
+          void resultCard.offsetWidth;
+          resultCard.style.animation = 'cardIn 0.5s ease';
+        }
+
+        function drawFortune() {
+          tube.classList.add('shake');
+          setTimeout(() => { tube.classList.remove('shake'); }, 200);
+
+          // 摇一摇延迟出结果
+          setTimeout(() => {
+            const idx = Math.floor(Math.random() * fortunes.length);
+            const fortune = fortunes[idx];
+            showResult(fortune);
+            localStorage.setItem('dailyFortune', JSON.stringify({
+              date: today,
+              idx: idx,
+            }));
+          }, 600);
+        }
+
+        tube.addEventListener('click', drawFortune);
+
+        // 如果今天抽过了就直接显示
+        if (saved.date === today && saved.idx !== undefined) {
+          showResult(fortunes[saved.idx]);
+        }
+      })();
+    </script>
+  </body>
+</html>
